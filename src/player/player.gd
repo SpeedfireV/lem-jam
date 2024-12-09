@@ -4,6 +4,9 @@ const SPEED = 500.0
 var direction: Vector2 = Vector2.ZERO
 @onready var animation: AnimatedSprite2D = $AnimatedSprite2D
 
+func _ready():
+	ScenesManager.player = self
+
 func _physics_process(delta: float) -> void:
 	direction = Input.get_vector("move_left", "move_right", "move_up", "move_down")
 	velocity = direction * SPEED

@@ -6,3 +6,4 @@
 script = ExtResource("1_ef4ow")
 
 [node name="InteractionPolygonCollsion" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-22, -31, -64, 8, -4, 68, 72, 54, 68, -23, -20, -47)
