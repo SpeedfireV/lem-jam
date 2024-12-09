@@ -1,0 +1,62 @@
+[gd_scene load_steps=5 format=3 uid="uid://cxry8c0vok8mc"]
+
+[ext_resource type="Texture2D" uid="uid://0u0fkigchvow" path="res://assets/graphics/bit.ly_3Zl89Tq.png" id="1_tshs1"]
+
+[sub_resource type="Gradient" id="Gradient_jcqgt"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_gt0is"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_vf6sd"]
+color_ramp = SubResource("Gradient_jcqgt")
+noise = SubResource("FastNoiseLite_gt0is")
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("NoiseTexture2D_vf6sd")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 100.0
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 100
+text = "Game is designed to be played by two players, one in front of the pc and the other with a script.
+
+You can find the script here:"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -155.0
+offset_top = 89.0
+offset_right = 501.0
+offset_bottom = 745.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_tshs1")
