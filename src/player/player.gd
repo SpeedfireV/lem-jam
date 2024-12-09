@@ -5,6 +5,7 @@ var direction: Vector2 = Vector2.ZERO
 @onready var animation: AnimatedSprite2D = $AnimatedSprite2D
 
 func _ready():
+	animation.play()
 	ScenesManager.player = self
 
 func _physics_process(delta: float) -> void:
