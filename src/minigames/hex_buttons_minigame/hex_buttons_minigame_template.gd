@@ -11,4 +11,3 @@ func win(): # Nadpisuje bazową wygraną
 
 func lose(): # Nadpisuje bazową przegraną
 	print("loososet")
-

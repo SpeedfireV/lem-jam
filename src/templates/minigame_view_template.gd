@@ -6,6 +6,9 @@ class_name MinigameViewTemplate extends CanvasLayer
 @export var minigame_view: PackedScene # MUSISZ DODAĆ NA STARCIE MINIGAME_VIEW - TO JEST WŁAŚCIWA MINIGIERKA
 
 func _ready():
+	$BackgroundTextureRect/Label.visible = false
+	$BackgroundTextureRect/AnimationPlayer.play()
+	$BackgroundTextureRect/Label.visible = true
 	exit_button.pressed.connect(exit_minigame)
 	set_minigame()
 

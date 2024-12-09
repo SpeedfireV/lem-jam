@@ -3,6 +3,7 @@ extends Node
 var default_code: String = "#123-456-789"
 var code: String = default_code
 var expected_code: String = ""
+var input_code: String = ""
 var num2_dict: Dictionary = {
 	"0": "1",
 	"1": "2",
@@ -64,7 +65,6 @@ func calc_expected_code(wire1, wire2, wire3):
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	
 	calc_expected_code(true, true, true)
 
 
