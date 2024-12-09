@@ -1,9 +1,9 @@
 [gd_scene load_steps=3 format=3 uid="uid://cf82xausiwslb"]
 
-[ext_resource type="PackedScene" uid="uid://cwbx65lmu16d7" path="res://src/templates/minigame_view_template.tscn" id="1_ostd6"]
-[ext_resource type="PackedScene" uid="uid://ri2a3m7ce5jk" path="res://src/minigames/numpad_minigame/numpad_minigame.tscn" id="2_wk030"]
+[ext_resource type="PackedScene" uid="uid://cwbx65lmu16d7" path="res://src/templates/minigame_view_template.tscn" id="1_adm0q"]
+[ext_resource type="PackedScene" uid="uid://ri2a3m7ce5jk" path="res://src/minigames/numpad_minigame/numpad_minigame.tscn" id="2_ggkr7"]
 
-[node name="MinigameTemplate" instance=ExtResource("1_ostd6")]
+[node name="MinigameTemplate" instance=ExtResource("1_adm0q")]
 
 [node name="MarginContainer" parent="BackgroundTextureRect" index="0"]
 anchors_preset = 8
@@ -17,5 +17,5 @@ offset_right = 56.0
 offset_bottom = 56.0
 scale = Vector2(0.8, 0.8)
 
-[node name="numpad_minigame" parent="BackgroundTextureRect/MarginContainer/Mingame" index="0" instance=ExtResource("2_wk030")]
+[node name="numpad_minigame" parent="BackgroundTextureRect/MarginContainer/Mingame" index="0" instance=ExtResource("2_ggkr7")]
 layout_mode = 2
