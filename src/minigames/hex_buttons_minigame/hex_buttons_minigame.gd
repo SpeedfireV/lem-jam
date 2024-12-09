@@ -45,6 +45,3 @@ func _ready():
 
 func on_button_pressed(number: int):
 	pass
-
-
-
