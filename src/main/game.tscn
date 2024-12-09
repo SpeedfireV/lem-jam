@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" path="res://src/main/game.gd" id="1_lchk3"]
 [ext_resource type="PackedScene" uid="uid://ccf13asl4x4er" path="res://src/player/player.tscn" id="2_b63wl"]
-[ext_resource type="PackedScene" uid="uid://cwbx65lmu16d7" path="res://src/templates/minigame_view_template.tscn" id="3_00hhh"]
 [ext_resource type="Script" path="res://src/main/minigames.gd" id="4_pgfxb"]
+[ext_resource type="PackedScene" uid="uid://bi6861uomfeju" path="res://src/minigames/hex_buttons_minigame/hex_buttons_minigame_template.tscn" id="5_o8pq3"]
 [ext_resource type="PackedScene" uid="uid://c7k7ypy6jdi3i" path="res://src/templates/interaction_area_template.tscn" id="5_svp5j"]
 
 [node name="Game" type="Node"]
@@ -11,11 +11,12 @@ script = ExtResource("1_lchk3")
 
 [node name="Player" parent="." instance=ExtResource("2_b63wl")]
 
-[node name="MinigameTemplate" parent="." instance=ExtResource("3_00hhh")]
-
 [node name="Minigames" type="Node" parent="."]
 script = ExtResource("4_pgfxb")
+
+[node name="HexButtonsMinigameTemplate" parent="Minigames" instance=ExtResource("5_o8pq3")]
 
 [node name="InteractionAreas" type="Node" parent="."]
 
 [node name="InteractionArea" parent="InteractionAreas" instance=ExtResource("5_svp5j")]
+minigame = ExtResource("5_o8pq3")
