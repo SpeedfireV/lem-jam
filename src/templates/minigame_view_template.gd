@@ -16,6 +16,6 @@ func exit_minigame():
 	queue_free()
 
 func set_minigame():
-	if minigame_view != null:
+	if minigame_view != null and len(minigame_node.get_children()) <= 0:
 		var new_minigame = minigame_view.instantiate()
 		minigame_node.add_child(new_minigame)

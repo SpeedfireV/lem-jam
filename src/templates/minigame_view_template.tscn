@@ -34,11 +34,16 @@ theme_override_constants/margin_top = 24
 theme_override_constants/margin_right = 24
 theme_override_constants/margin_bottom = 24
 
+[node name="Mingame" type="MarginContainer" parent="BackgroundTextureRect/MarginContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 32
+
 [node name="ExitButton" type="Button" parent="BackgroundTextureRect/MarginContainer"]
 custom_minimum_size = Vector2(40, 40)
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 0
 text = "X"
-
-[node name="Mingame" type="Node" parent="BackgroundTextureRect/MarginContainer"]
