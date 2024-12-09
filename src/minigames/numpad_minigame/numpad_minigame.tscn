@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://ri2a3m7ce5jk"]
+[gd_scene load_steps=2 format=3 uid="uid://ri2a3m7ce5jk"]
+
+[ext_resource type="Texture2D" uid="uid://bt0pgc8bqw1kc" path="res://assets/graphics/objects/sticky_note.png" id="1_h22sk"]
 
 [node name="numpad_minigame" type="Control"]
 layout_mode = 3
@@ -10,15 +12,9 @@ grow_vertical = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -898.0
-offset_top = -540.0
-offset_right = 898.0
-offset_bottom = 540.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -110,7 +106,7 @@ text = "cancel"
 
 [node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
 layout_mode = 2
-size_flags_horizontal = 3
+size_flags_horizontal = 10
 
 [node name="Stickynote" type="Control" parent="HBoxContainer/VBoxContainer"]
 custom_minimum_size = Vector2(512, 512)
@@ -123,6 +119,7 @@ custom_minimum_size = Vector2(512, 512)
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
+texture = ExtResource("1_h22sk")
 
 [node name="Label" type="Label" parent="HBoxContainer/VBoxContainer/Stickynote"]
 layout_mode = 1

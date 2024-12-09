@@ -64,6 +64,7 @@ func calc_expected_code(wire1, wire2, wire3):
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	
 	calc_expected_code(true, true, true)
 
 
