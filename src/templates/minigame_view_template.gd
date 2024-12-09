@@ -1,4 +1,4 @@
-extends CanvasLayer
+class_name MinigameViewTemplate extends CanvasLayer
 
 
 @onready var exit_button: Button = $BackgroundTextureRect/MarginContainer/ExitButton
