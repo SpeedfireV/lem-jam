@@ -1,4 +1,4 @@
-extends CanvasLayer
+class_name MinigameViewTemplate extends CanvasLayer
 
 
 @onready var exit_button: Button = $BackgroundTextureRect/MarginContainer/ExitButton
@@ -16,4 +16,5 @@ func exit_minigame():
 	queue_free()
 
 func set_minigame():
-	minigame_node.add_child(minigame_view)
+	if minigame_view != null:
+		minigame_node.add_child(minigame_view)
