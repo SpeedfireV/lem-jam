@@ -1,0 +1,11 @@
+[gd_scene load_steps=4 format=3 uid="uid://bi6861uomfeju"]
+
+[ext_resource type="PackedScene" uid="uid://cwbx65lmu16d7" path="res://src/templates/minigame_view_template.tscn" id="1_q7fon"]
+[ext_resource type="Script" path="res://src/minigames/hex_buttons_minigame/hex_buttons_minigame_template.gd" id="2_u3rut"]
+[ext_resource type="PackedScene" uid="uid://ck8f844if1bju" path="res://src/minigames/hex_buttons_minigame/hex_buttons_minigame.tscn" id="3_b6cfr"]
+
+[node name="HexButtonsMinigameTemplate" instance=ExtResource("1_q7fon")]
+script = ExtResource("2_u3rut")
+
+[node name="HexButtonsMinigame" parent="BackgroundTextureRect/MarginContainer/Mingame" index="0" instance=ExtResource("3_b6cfr")]
+layout_mode = 2
