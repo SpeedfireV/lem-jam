@@ -1,10 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://cppflsty7iwsp"]
+[gd_scene load_steps=3 format=3 uid="uid://cwbx65lmu16d7"]
 
-[ext_resource type="Script" path="res://src/templates/minigame_template.gd" id="1_4lbd6"]
+[ext_resource type="Script" path="res://src/templates/minigame_view_template.gd" id="1_ge3v1"]
 [ext_resource type="Texture2D" uid="uid://b15blrosd2pq" path="res://assets/icon.svg" id="2_65ruj"]
 
 [node name="MinigameTemplate" type="CanvasLayer"]
-script = ExtResource("1_4lbd6")
+script = ExtResource("1_ge3v1")
 
 [node name="BackgroundTextureRect" type="TextureRect" parent="."]
 anchors_preset = 8
