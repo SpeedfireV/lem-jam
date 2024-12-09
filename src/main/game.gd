@@ -3,7 +3,7 @@ extends Node
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	var target_screen = 1  # Change to the desired screen index (starting from 0)
+	var target_screen = 2  # Change to the desired screen index (starting from 0)
 	var screen_count = DisplayServer.get_screen_count()
 
 	if target_screen < screen_count:
