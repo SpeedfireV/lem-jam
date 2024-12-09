@@ -10,120 +10,136 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
 script = ExtResource("1_6egj1")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="."]
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_constants/separation = 24
 
-[node name="GridContainer" type="GridContainer" parent="HBoxContainer"]
-custom_minimum_size = Vector2(1280, 0)
+[node name="InputLabel" type="Label" parent="VBoxContainer"]
 layout_mode = 2
-size_flags_horizontal = 0
+size_flags_horizontal = 4
+size_flags_vertical = 1
+text = "INPUTED TEXT"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="GridContainer" type="GridContainer" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 2
 columns = 3
 
-[node name="Button1" type="Button" parent="HBoxContainer/GridContainer"]
+[node name="Button1" type="Button" parent="VBoxContainer/HBoxContainer/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_font_sizes/font_size = 150
 text = "1"
 
-[node name="Button2" type="Button" parent="HBoxContainer/GridContainer"]
+[node name="Button2" type="Button" parent="VBoxContainer/HBoxContainer/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_font_sizes/font_size = 150
 text = "2"
 
-[node name="Button3" type="Button" parent="HBoxContainer/GridContainer"]
+[node name="Button3" type="Button" parent="VBoxContainer/HBoxContainer/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_font_sizes/font_size = 150
 text = "3"
 
-[node name="Button4" type="Button" parent="HBoxContainer/GridContainer"]
+[node name="Button4" type="Button" parent="VBoxContainer/HBoxContainer/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_font_sizes/font_size = 150
 text = "4"
 
-[node name="Button5" type="Button" parent="HBoxContainer/GridContainer"]
+[node name="Button5" type="Button" parent="VBoxContainer/HBoxContainer/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_font_sizes/font_size = 150
 text = "5"
 
-[node name="Button6" type="Button" parent="HBoxContainer/GridContainer"]
+[node name="Button6" type="Button" parent="VBoxContainer/HBoxContainer/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_font_sizes/font_size = 150
 text = "6"
 
-[node name="Button7" type="Button" parent="HBoxContainer/GridContainer"]
+[node name="Button7" type="Button" parent="VBoxContainer/HBoxContainer/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_font_sizes/font_size = 150
 text = "7"
 
-[node name="Button8" type="Button" parent="HBoxContainer/GridContainer"]
+[node name="Button8" type="Button" parent="VBoxContainer/HBoxContainer/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_font_sizes/font_size = 150
 text = "8"
 
-[node name="Button9" type="Button" parent="HBoxContainer/GridContainer"]
+[node name="Button9" type="Button" parent="VBoxContainer/HBoxContainer/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_font_sizes/font_size = 150
 text = "9"
 
-[node name="Button_accept" type="Button" parent="HBoxContainer/GridContainer"]
+[node name="ButtonAccept" type="Button" parent="VBoxContainer/HBoxContainer/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_font_sizes/font_size = 150
 text = "accept"
 
-[node name="Button0" type="Button" parent="HBoxContainer/GridContainer"]
+[node name="Button0" type="Button" parent="VBoxContainer/HBoxContainer/GridContainer"]
 layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
 theme_override_font_sizes/font_size = 150
 text = "0"
 
-[node name="Button_cancel" type="Button" parent="HBoxContainer/GridContainer"]
+[node name="ButtonCancel" type="Button" parent="VBoxContainer/HBoxContainer/GridContainer"]
 layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
 theme_override_font_sizes/font_size = 150
 text = "cancel"
 
-[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer"]
 layout_mode = 2
-size_flags_horizontal = 10
+size_flags_horizontal = 8
 
-[node name="Stickynote" type="Control" parent="HBoxContainer/VBoxContainer"]
+[node name="Stickynote" type="Control" parent="VBoxContainer/HBoxContainer/VBoxContainer"]
 custom_minimum_size = Vector2(512, 512)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 6
 
-[node name="TextureRect" type="TextureRect" parent="HBoxContainer/VBoxContainer/Stickynote"]
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/HBoxContainer/VBoxContainer/Stickynote"]
 custom_minimum_size = Vector2(512, 512)
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 texture = ExtResource("1_h22sk")
 
-[node name="Label" type="Label" parent="HBoxContainer/VBoxContainer/Stickynote"]
+[node name="CodeLabel" type="Label" parent="VBoxContainer/HBoxContainer/VBoxContainer/Stickynote"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5

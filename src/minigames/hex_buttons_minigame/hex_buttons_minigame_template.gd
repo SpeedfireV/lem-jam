@@ -7,8 +7,8 @@ func _ready():
 	hex_minigame_node.finished.connect(minigame_finished)
 
 func win(): # Nadpisuje bazową wygraną
-	queue_free()
+	ScenesManager.minigames_node.clear_minigames()
 	# TODO: Ogarnąć zapis zrobionych minigier
 
 func lose(): # Nadpisuje bazową przegraną
-	print("loososet")
+	ScenesManager.minigames_node.clear_minigames()
