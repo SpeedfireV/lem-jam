@@ -1,5 +1,7 @@
 class_name InterationAreaTemplate extends Area2D
 
+
+# TODO: ADD BACKGROUND!!!!!!!!!
 @onready var interaction_polygon: CollisionPolygon2D = $InteractionPolygonCollsion
 var minigame: MinigameViewTemplate
 
