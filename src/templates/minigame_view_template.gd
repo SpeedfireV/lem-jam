@@ -19,3 +19,15 @@ func set_minigame():
 	if minigame_view != null and len(minigame_node.get_children()) <= 0:
 		var new_minigame = minigame_view.instantiate()
 		minigame_node.add_child(new_minigame)
+
+func minigame_finished(winned: bool):
+	if winned:
+		win()
+	else:
+		lose()
+
+func win():
+	pass
+
+func lose():
+	pass
