@@ -1,0 +1,298 @@
+[gd_scene load_steps=32 format=3 uid="uid://l1img4gdavns"]
+
+[ext_resource type="Script" path="res://src/main/game.gd" id="1_1ewmp"]
+[ext_resource type="Texture2D" uid="uid://83nr78el5sf6" path="res://assets/map.webp" id="1_36b35"]
+[ext_resource type="Script" path="res://src/main/player.gd" id="2_rtmcq"]
+[ext_resource type="Texture2D" uid="uid://b3k141ocuurav" path="res://assets/dinos/DinoSprites - doux.png" id="4_heexs"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fbkye"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ilfit"]
+atlas = ExtResource("4_heexs")
+region = Rect2(0, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_74tsu"]
+atlas = ExtResource("4_heexs")
+region = Rect2(24, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4ung8"]
+atlas = ExtResource("4_heexs")
+region = Rect2(48, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sxmqc"]
+atlas = ExtResource("4_heexs")
+region = Rect2(72, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6m8j3"]
+atlas = ExtResource("4_heexs")
+region = Rect2(96, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_72xyv"]
+atlas = ExtResource("4_heexs")
+region = Rect2(120, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i8b6q"]
+atlas = ExtResource("4_heexs")
+region = Rect2(144, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ybsbn"]
+atlas = ExtResource("4_heexs")
+region = Rect2(168, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3re3x"]
+atlas = ExtResource("4_heexs")
+region = Rect2(192, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2ytiv"]
+atlas = ExtResource("4_heexs")
+region = Rect2(216, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_at2qf"]
+atlas = ExtResource("4_heexs")
+region = Rect2(240, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ilwe5"]
+atlas = ExtResource("4_heexs")
+region = Rect2(264, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w6ojb"]
+atlas = ExtResource("4_heexs")
+region = Rect2(288, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_maayy"]
+atlas = ExtResource("4_heexs")
+region = Rect2(312, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1ch3l"]
+atlas = ExtResource("4_heexs")
+region = Rect2(336, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jo5gc"]
+atlas = ExtResource("4_heexs")
+region = Rect2(360, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s763g"]
+atlas = ExtResource("4_heexs")
+region = Rect2(384, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hqkxp"]
+atlas = ExtResource("4_heexs")
+region = Rect2(408, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0xxeh"]
+atlas = ExtResource("4_heexs")
+region = Rect2(432, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e37dw"]
+atlas = ExtResource("4_heexs")
+region = Rect2(456, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1a0wo"]
+atlas = ExtResource("4_heexs")
+region = Rect2(480, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6cjub"]
+atlas = ExtResource("4_heexs")
+region = Rect2(504, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a506b"]
+atlas = ExtResource("4_heexs")
+region = Rect2(528, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8perl"]
+atlas = ExtResource("4_heexs")
+region = Rect2(552, 0, 24, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_n3pjq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ilfit")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_74tsu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4ung8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sxmqc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6m8j3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_72xyv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i8b6q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ybsbn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3re3x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2ytiv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_at2qf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ilwe5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w6ojb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_maayy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1ch3l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jo5gc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s763g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hqkxp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0xxeh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e37dw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1a0wo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6cjub")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a506b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8perl")
+}],
+"loop": true,
+"name": &"default",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ilfit")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_74tsu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4ung8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sxmqc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sxmqc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sxmqc")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6m8j3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_72xyv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i8b6q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ybsbn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3re3x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2ytiv")
+}],
+"loop": true,
+"name": &"running",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vw7qa"]
+size = Vector2(122, 19.5)
+
+[node name="Main" type="Node"]
+
+[node name="Game" type="Node" parent="."]
+script = ExtResource("1_1ewmp")
+
+[node name="Map" type="StaticBody2D" parent="Game"]
+
+[node name="TextureRect" type="TextureRect" parent="Game/Map"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -4282.5
+offset_top = -2397.0
+offset_right = 4282.5
+offset_bottom = 2397.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_36b35")
+
+[node name="OuterBounds" type="CollisionPolygon2D" parent="Game/Map"]
+visible = false
+position = Vector2(-4279, -2402)
+polygon = PackedVector2Array(5981, 4417, 5437, 4415, 5235, 4213, 5235, 3711, 5760, 3707, 5762, 3585, 5160, 3581, 5165, 4406, 4427, 4410, 4053, 4032, 4053, 3990, 2653, 3998, 2653, 3481, 2313, 3486, 2315, 3770, 1681, 3781, 1455, 3596, 1458, 2824, 1782, 2826, 1786, 2345, 1536, 2352, 1536, 2580, 1246, 2580, 1251, 2888, 1066, 2885, 732, 2669, 740, 1627, 1057, 1418, 1253, 1420, 1249, 1719, 1527, 1721, 1536, 1983, 1786, 1979, 1789, 1554, 1472, 1545, 1456, 782, 1677, 602, 2320, 595, 2317, 818, 3852, 812, 3851, 394, 4211, 29, 5356, 28, 5883, 545, 5888, 819, 6249, 819, 6254, 453, 6695, 450, 7095, 844, 7097, 1404, 6853, 1415, 6847, 1619, 7276, 1627, 7278, 1872, 7779, 1866, 7788, 1627, 8126, 1625, 8438, 1864, 8436, 2214, 8139, 2474, 7788, 2470, 7788, 2227, 7277, 2233, 7277, 2538, 6852, 2538, 6854, 2976, 7092, 2980, 7093, 3552, 6697, 3947, 6252, 3945, 6252, 3581, 6054, 3580, 6057, 3704, 6180, 3713, 6177, 4219, 6000, 4409, 6033, 4564, 8678, 2614, 8847, 207, 5525, -301, 1490, -217, 117, 2496, 1575, 4869, 4406, 4784, 6013, 4569)
+
+[node name="InnerBounds1" type="CollisionPolygon2D" parent="Game/Map"]
+visible = false
+position = Vector2(-4279, -2402)
+polygon = PackedVector2Array(2096, 1991, 2367, 1988, 2365, 1768, 2529, 1612, 2724, 1604, 2854, 1736, 2854, 2576, 2365, 2578, 2362, 2354, 2086, 2354, 2087, 2820, 2319, 2824, 2319, 3131, 2951, 3124, 2954, 3634, 3132, 3634, 3127, 2482, 4059, 2486, 4065, 2718, 3839, 2950, 3842, 3309, 3656, 3496, 3416, 3498, 3416, 3628, 4052, 3633, 4057, 3022, 4330, 2742, 4707, 2745, 4707, 2062, 4311, 2060, 3860, 1605, 3859, 1176, 3491, 1178, 3487, 1289, 3744, 1289, 3744, 1750, 4062, 2057, 4058, 2309, 3114, 2305, 2967, 2110, 2968, 1287, 3190, 1294, 3190, 1185, 2316, 1179, 2320, 1537, 2093, 1544)
+
+[node name="InnerBounds2" type="CollisionPolygon2D" parent="Game/Map"]
+visible = false
+position = Vector2(-4279, -2402)
+polygon = PackedVector2Array(5010, 2293, 5010, 2061, 5416, 2060, 5886, 1601, 5888, 1186, 6253, 1183, 6250, 1225, 6437, 1408, 6553, 1411, 6550, 1624, 6374, 1622, 6376, 1549, 5991, 1549, 5992, 1628, 5708, 1899, 5711, 2186, 6397, 2187, 6395, 2001, 6978, 2001, 6981, 2169, 6542, 2178, 6545, 2981, 6442, 2983, 6252, 3171, 6247, 3207, 5167, 3216, 5168, 2736, 5010, 2735, 5010, 2651, 5335, 2656, 5338, 3117, 6082, 3121, 6245, 2953, 6248, 2294)
+
+[node name="MinigameTrigger1" type="Area2D" parent="Game/Map"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Game/Map/MinigameTrigger1"]
+position = Vector2(-606, -223)
+scale = Vector2(10, 10)
+shape = SubResource("RectangleShape2D_fbkye")
+
+[node name="Player" type="CharacterBody2D" parent="Game"]
+position = Vector2(0, -1000)
+script = ExtResource("2_rtmcq")
+
+[node name="Camera2D" type="Camera2D" parent="Game/Player"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Game/Player"]
+position = Vector2(3.05176e-05, -3.8147e-06)
+scale = Vector2(8, 8)
+sprite_frames = SubResource("SpriteFrames_n3pjq")
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.603837
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Game/Player"]
+position = Vector2(0, 62)
+shape = SubResource("RectangleShape2D_vw7qa")
+
+[node name="Menu" type="Node" parent="."]
+
+[node name="GameControl" type="Node" parent="."]
