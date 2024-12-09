@@ -7,8 +7,6 @@ class_name MinigameViewTemplate extends CanvasLayer
 
 func _ready():
 	$BackgroundTextureRect/Label.visible = false
-	$BackgroundTextureRect/AnimationPlayer.play()
-	$BackgroundTextureRect/Label.visible = true
 	exit_button.pressed.connect(exit_minigame)
 	set_minigame()
 
@@ -30,7 +28,10 @@ func minigame_finished(winned: bool):
 		lose()
 
 func win():
-	pass
+	$BackgroundTextureRect/Label.visible = false
+	$BackgroundTextureRect/AnimationPlayer.play("new_animation")
+	$BackgroundTextureRect/Label.visible = true
+	exit_minigame()
 
 func lose():
 	pass
