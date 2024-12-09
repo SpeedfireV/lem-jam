@@ -1,10 +1,11 @@
-[gd_scene load_steps=32 format=3 uid="uid://l1img4gdavns"]
+[gd_scene load_steps=33 format=3 uid="uid://l1img4gdavns"]
 
 [ext_resource type="Script" path="res://src/main/game.gd" id="1_1ewmp"]
 [ext_resource type="Texture2D" uid="uid://83nr78el5sf6" path="res://assets/map.webp" id="1_36b35"]
 [ext_resource type="Script" path="res://src/main/player.gd" id="2_rtmcq"]
 [ext_resource type="PackedScene" uid="uid://bw4dgm553ofnj" path="res://src/main/minigame_trigger.tscn" id="3_r0bwp"]
 [ext_resource type="Texture2D" uid="uid://b3k141ocuurav" path="res://assets/dinos/DinoSprites - doux.png" id="4_heexs"]
+[ext_resource type="Script" path="res://src/main/minigames.gd" id="6_hnae5"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ilfit"]
 atlas = ExtResource("4_heexs")
@@ -265,6 +266,7 @@ position = Vector2(-4279, -2402)
 polygon = PackedVector2Array(5010, 2293, 5010, 2061, 5416, 2060, 5886, 1601, 5888, 1186, 6253, 1183, 6250, 1225, 6437, 1408, 6553, 1411, 6550, 1624, 6374, 1622, 6376, 1549, 5991, 1549, 5992, 1628, 5708, 1899, 5711, 2186, 6397, 2187, 6395, 2001, 6978, 2001, 6981, 2169, 6542, 2178, 6545, 2981, 6442, 2983, 6252, 3171, 6247, 3207, 5167, 3216, 5168, 2736, 5010, 2735, 5010, 2651, 5335, 2656, 5338, 3117, 6082, 3121, 6245, 2953, 6248, 2294)
 
 [node name="MinigameTrigger" parent="Game/Map" instance=ExtResource("3_r0bwp")]
+position = Vector2(-20, -9)
 
 [node name="Player" type="CharacterBody2D" parent="Game"]
 position = Vector2(0, -1000)
@@ -284,8 +286,9 @@ frame_progress = 0.603837
 position = Vector2(0, 62)
 shape = SubResource("RectangleShape2D_vw7qa")
 
+[node name="Minigames" type="Node" parent="Game"]
+script = ExtResource("6_hnae5")
+
 [node name="Menu" type="Node" parent="."]
 
 [node name="GameControl" type="Node" parent="."]
-
-[node name="Minigames" type="Node" parent="."]

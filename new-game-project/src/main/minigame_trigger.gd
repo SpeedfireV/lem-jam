@@ -1,6 +1,6 @@
 class_name MinigameTrigger extends Area2D
 
-@onready var minigames_node: Node = get_tree().root.get_node("Main/Minigames")
+var minigame1: PackedScene = preload("res://src/main/minigame.tscn")
 var is_player_inside: bool = false
 
 # Called when the node enters the scene tree for the first time.
@@ -21,7 +21,8 @@ func _on_body_exited(body: Node2D) -> void:
 		is_player_inside = false
 	
 func launch_minigame():
-	pass
+	var new_minigame: Minigame = minigame1.instantiate()
+	ScenesManager.minigames_node.add_child(new_minigame)
 
 #func clear_minigames():
 	#var minigames_node: Node = get_tree().root.get_node("Minigames")
