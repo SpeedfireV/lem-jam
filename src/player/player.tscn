@@ -1,10 +1,29 @@
-[gd_scene load_steps=2 format=3 uid="uid://ccf13asl4x4er"]
+[gd_scene load_steps=5 format=3 uid="uid://ccf13asl4x4er"]
+
+[ext_resource type="Script" path="res://src/player/player.gd" id="1_vhs4e"]
+[ext_resource type="Texture2D" uid="uid://b15blrosd2pq" path="res://assets/icon.svg" id="2_wcima"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ibwwf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_wcima")
+}],
+"loop": true,
+"name": &"placeholder",
+"speed": 5.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vcygc"]
+size = Vector2(128, 128)
 
 [node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_vhs4e")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_ibwwf")
+animation = &"placeholder"
+autoplay = "placeholder"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_vcygc")
