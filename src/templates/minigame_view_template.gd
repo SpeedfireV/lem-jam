@@ -7,6 +7,7 @@ var minigame_view # MUSISZ DODAĆ NA STARCIE MINIGAME_VIEW - TO JEST WŁAŚCIWA 
 
 func _ready():
 	exit_button.pressed.connect(exit_minigame)
+	set_minigame()
 
 func _process(delta):
 	print(exit_button)
