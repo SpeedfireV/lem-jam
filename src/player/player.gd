@@ -1,4 +1,4 @@
-extends CharacterBody2D
+class_name Player extends CharacterBody2D
 
 const SPEED = 500.0
 var direction: Vector2 = Vector2.ZERO
