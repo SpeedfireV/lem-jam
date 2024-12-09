@@ -50,10 +50,16 @@ func _ready():
 		var row: int = int(selected_configuration[i])
 		for j in range(3):
 			var normal_stylebox: StyleBoxFlat = StyleBoxFlat.new()
+			var pressed_stylebox: StyleBoxFlat = StyleBoxFlat.new()
+			var hover_stylebox: StyleBoxFlat = StyleBoxFlat.new()
 			normal_stylebox.bg_color = colors[(row-1) * 3 + j]
+			pressed_stylebox.bg_color = colors[(row-1) * 3 + j].lightened(0.4)
+			hover_stylebox.bg_color = colors[(row-1) * 3 + j].lightened(0.25)
 			print(colors[i])
 
 			buttons[i * 3 + j].add_theme_stylebox_override("normal", normal_stylebox)
+			buttons[i * 3 + j].add_theme_stylebox_override("pressed", pressed_stylebox)
+			buttons[i * 3 + j].add_theme_stylebox_override("hover", hover_stylebox)
 	for i in range(len(buttons)):
 		buttons[i].pressed.connect(on_button_pressed.bind(i))
 
