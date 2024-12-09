@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://bv3qhpu1mw7nx"]
+[gd_scene load_steps=6 format=3 uid="uid://bv3qhpu1mw7nx"]
 
 [ext_resource type="Script" path="res://src/main/game.gd" id="1_lchk3"]
 [ext_resource type="PackedScene" uid="uid://ccf13asl4x4er" path="res://src/player/player.tscn" id="2_b63wl"]
 [ext_resource type="PackedScene" uid="uid://cwbx65lmu16d7" path="res://src/templates/minigame_view_template.tscn" id="3_00hhh"]
 [ext_resource type="Script" path="res://src/main/minigames.gd" id="4_pgfxb"]
+[ext_resource type="PackedScene" uid="uid://c7k7ypy6jdi3i" path="res://src/templates/interaction_area_template.tscn" id="5_svp5j"]
 
 [node name="Game" type="Node"]
 script = ExtResource("1_lchk3")
@@ -16,3 +17,5 @@ script = ExtResource("1_lchk3")
 script = ExtResource("4_pgfxb")
 
 [node name="InteractionAreas" type="Node" parent="."]
+
+[node name="InteractionArea" parent="InteractionAreas" instance=ExtResource("5_svp5j")]
