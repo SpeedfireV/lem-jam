@@ -1,10 +1,11 @@
 extends Control
 
+signal finished(win: bool)
 
-@onready var button1: Button = $HBoxContainer/Button1
-@onready var button2: Button = $HBoxContainer/Button2
-@onready var button3: Button = $HBoxContainer/Button3
-@onready var button4: Button = $HBoxContainer/Button4
+@onready var button1: Button = $VBoxContainer/HBoxContainer/Button1
+@onready var button2: Button = $VBoxContainer/HBoxContainer/Button2
+@onready var button3: Button = $VBoxContainer/HBoxContainer/Button3
+@onready var button4: Button = $VBoxContainer/HBoxContainer/Button4
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
