@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://dc0smk0xsegmi"]
+
+[ext_resource type="PackedScene" uid="uid://cwbx65lmu16d7" path="res://src/templates/minigame_view_template.tscn" id="1_ctn68"]
+[ext_resource type="PackedScene" uid="uid://ds2ve8rcv3pnn" path="res://src/minigames/end_minigame/end_minigame.tscn" id="2_ndv57"]
+
+[node name="MinigameTemplate2" instance=ExtResource("1_ctn68")]
+
+[node name="EndMinigame" parent="BackgroundTextureRect/MarginContainer/Mingame" index="0" instance=ExtResource("2_ndv57")]
+layout_mode = 2
