@@ -10,6 +10,8 @@ class_name ColorTimeMinigame extends Control
 var colors: Array[Color] = [Color.RED, Color.GREEN, Color.BLUE]
 
 var times_pressed: int = 0
+var time_started: int
+var selected_color: Color
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -18,6 +20,7 @@ func _ready() -> void:
 	main_light.add_theme_stylebox_override("panel", stylebox)
 	time_label.text = "STARTED AT:\n" + str(int(int(ScenesManager.hud.timer.time_left) % 60)) + " SECONDS"
 	button.pressed.connect(_on_button_pressed)
+	timer.timeout.connect(_on_timer_timeout)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -27,3 +30,7 @@ func _process(delta: float) -> void:
 
 func _on_button_pressed():
 	times_pressed += 1
+
+func _on_timer_timeout():
+	if true:
+		pass
