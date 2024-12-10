@@ -4,6 +4,11 @@ signal finished(win: bool)
 
 var current_position: Vector2
 
+@onready var light1: Panel = $HBoxContainer/VBoxContainer/LightsContainer/Panel
+@onready var light2: Panel = $HBoxContainer/VBoxContainer/LightsContainer/Panel2
+@onready var light3: Panel = $HBoxContainer/VBoxContainer/LightsContainer/Panel3
+@onready var light_on_texture = preload("res://assets/graphics/objects/light_on.png")
+
 @onready var button_up: Button = $HBoxContainer/GridContainer/ButtonUp
 @onready var button_left: Button = $HBoxContainer/GridContainer/ButtonLeft
 @onready var button_right: Button = $HBoxContainer/GridContainer/ButtonRight
@@ -25,7 +30,18 @@ var directions: Dictionary = {
 	]
 }
 
+func turn_on_light():
+	var stylebox_on: StyleBoxTexture = StyleBoxTexture.new()
+	stylebox_on.texture = light_on_texture
+	if turned_on_light == 0:
+		light1.add_theme_stylebox_override("panel", stylebox_on)
+	elif turned_on_light == 1:
+		light2.add_theme_stylebox_override("panel", stylebox_on)
+	else:
+		light3.add_theme_stylebox_override("panel", stylebox_on)
+
 func _ready():
+	turn_on_light()
 	current_position = directions[turned_on_light][0]
 	button_up.pressed.connect(move_up)
 	button_left.pressed.connect(move_left)

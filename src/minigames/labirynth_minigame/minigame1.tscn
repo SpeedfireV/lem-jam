@@ -1,4 +1,4 @@
-[gd_scene load_steps=2 format=3 uid="uid://85ngytelf18j"]
+[gd_scene load_steps=2 format=3 uid="uid://xdty6n6ryqho"]
 
 [ext_resource type="PackedScene" uid="uid://cwbx65lmu16d7" path="res://src/templates/minigame_view_template.tscn" id="1_0ee6p"]
 
