@@ -1,8 +1,4 @@
-<<<<<<< Updated upstream
-[gd_scene load_steps=18 format=4 uid="uid://bv3qhpu1mw7nx"]
-=======
 [gd_scene load_steps=22 format=3 uid="uid://bv3qhpu1mw7nx"]
->>>>>>> Stashed changes
 
 [ext_resource type="Script" path="res://src/main/game.gd" id="1_lchk3"]
 [ext_resource type="PackedScene" uid="uid://ccf13asl4x4er" path="res://src/player/player.tscn" id="2_b63wl"]
@@ -125,29 +121,6 @@ text = "20:00"
 
 [node name="Song1" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("9_xddu1")
-<<<<<<< Updated upstream
-bus = &"Music"
-
-[node name="Song2" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("9_armxa")
-bus = &"Music"
-
-[node name="Song3" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("11_a3fyw")
-bus = &"Music"
-
-[node name="Song4" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("12_malpn")
-bus = &"Music"
-
-[node name="Song5" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("13_l6bij")
-bus = &"Music"
-
-[node name="Song6" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("14_7v60e")
-bus = &"Music"
-=======
 
 [node name="Song2" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("9_armxa")
@@ -163,4 +136,3 @@ stream = ExtResource("13_l6bij")
 
 [node name="Song6" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("14_7v60e")
->>>>>>> Stashed changes
