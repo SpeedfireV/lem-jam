@@ -20,8 +20,6 @@ script = ExtResource("1_lchk3")
 [node name="Minigames" type="Node" parent="."]
 script = ExtResource("4_pgfxb")
 
-[node name="HexButtonsMinigameTemplate" parent="Minigames" instance=ExtResource("5_o8pq3")]
-
 [node name="InteractionAreas" type="Node" parent="."]
 
 [node name="InteractionArea" parent="InteractionAreas" instance=ExtResource("5_svp5j")]

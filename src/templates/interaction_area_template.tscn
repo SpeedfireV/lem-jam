@@ -17,4 +17,3 @@ texture = ExtResource("3_b0cy0")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_ka0j3")
-bus = &"SFX"

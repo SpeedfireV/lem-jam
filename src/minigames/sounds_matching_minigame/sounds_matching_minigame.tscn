@@ -1,0 +1,92 @@
+[gd_scene load_steps=2 format=3 uid="uid://c48wb7ucvoh3o"]
+
+[ext_resource type="Script" path="res://src/minigames/sounds_matching_minigame/sounds_matching_minigame.gd" id="1_c2mk7"]
+
+[node name="SoundsMatchingMinigame" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_c2mk7")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 32
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 48
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+theme_override_font_sizes/font_size = 120
+text = "1234567"
+
+[node name="CancelButton" type="Button" parent="VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 72
+text = "CANCEL"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 32
+
+[node name="RepeatButton" type="Button" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 72
+text = "REPEAT"
+
+[node name="ButtonsSoundContainer" type="HBoxContainer" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 16
+
+[node name="Button1" type="Button" parent="VBoxContainer/HBoxContainer/ButtonsSoundContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 72
+text = "1"
+
+[node name="Button2" type="Button" parent="VBoxContainer/HBoxContainer/ButtonsSoundContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 72
+text = "2"
+
+[node name="Button3" type="Button" parent="VBoxContainer/HBoxContainer/ButtonsSoundContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 72
+text = "3"
+
+[node name="Button4" type="Button" parent="VBoxContainer/HBoxContainer/ButtonsSoundContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 72
+text = "4"
+
+[node name="Button5" type="Button" parent="VBoxContainer/HBoxContainer/ButtonsSoundContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 72
+text = "5"
+
+[node name="AcceptButton" type="Button" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 72
+text = "ACCEPT"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
