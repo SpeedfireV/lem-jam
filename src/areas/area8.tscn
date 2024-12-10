@@ -5,6 +5,3 @@
 
 [node name="InteractionArea" instance=ExtResource("1_xabqs")]
 minigame = ExtResource("2_12nvw")
-
-[node name="InteractionPolygonCollsion" parent="." index="0"]
-polygon = PackedVector2Array(-32, -366, -20, -335, 27, -335, 22, -366)
