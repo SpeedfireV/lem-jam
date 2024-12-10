@@ -137,6 +137,8 @@ text = "ACCEPT
 
 [node name="Button_press_sound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_6s81x")
+bus = &"SFX"
 
 [node name="Error_sound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("6_axxy6")
+bus = &"SFX"
