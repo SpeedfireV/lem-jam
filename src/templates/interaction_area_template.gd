@@ -8,6 +8,8 @@ class_name InterationAreaTemplate extends Area2D
 
 var interaction_info: Label
 
+var bottom_info_label: PackedScene = preload("res://src/main/bottom_info_label.tscn")
+
 var is_player_inside: bool = false
 
 func _ready():
@@ -24,13 +26,18 @@ func _input(event):
 func player_entered_area(body: Node2D):
 	if body is Player:
 		is_player_inside = true
+	interaction_info = bottom_info_label.instantiate()
+	interaction_info.text = "CLICK [SPACE]\nTO INTERACT WITH PANEL"
 	
+	ScenesManager.hud.add_info(interaction_info)
 
 func player_exited_area(body: Node2D):
 	if body is Player:
 		is_player_inside = false
+
 	if interaction_info:
 		interaction_info.queue_free()
+	ScenesManager.hud.clear_texts()
 
 func dispose_area():
 	queue_free()
