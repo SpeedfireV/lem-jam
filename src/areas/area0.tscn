@@ -1,0 +1,12 @@
+[gd_scene load_steps=4 format=3 uid="uid://dpw24w4y04l2l"]
+
+[ext_resource type="PackedScene" uid="uid://c7k7ypy6jdi3i" path="res://src/templates/interaction_area_template.tscn" id="1_ly11q"]
+[ext_resource type="Script" path="res://src/areas/area_0.gd" id="2_8oa4l"]
+[ext_resource type="PackedScene" uid="uid://cw58r80hjosa2" path="res://src/minigames/labirynth_minigame/labirynth_minigame_template.tscn" id="3_xpu5c"]
+
+[node name="InteractionArea" instance=ExtResource("1_ly11q")]
+script = ExtResource("2_8oa4l")
+minigame = ExtResource("3_xpu5c")
+
+[node name="InteractionPolygonCollsion" parent="." index="0"]
+polygon = PackedVector2Array(-49, -47, -47, -21, -16, -16, -1, -23, 9, -34, 17, -47, -31, -48)
