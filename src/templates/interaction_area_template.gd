@@ -22,6 +22,7 @@ func _input(event):
 		$AudioStreamPlayer.play()
 		var new_minigame = minigame.instantiate() # JAK TO GÓWNO NIE DZIAŁA TO NIE WYBRAŁEŚ MINIGRY PRZYPISANEJ DO TEJ AREA
 		ScenesManager.minigames_node.set_minigame(new_minigame)
+		new_minigame.finished.connect(finished_minigame)
 
 
 func player_entered_area(body: Node2D):
@@ -35,10 +36,11 @@ func player_entered_area(body: Node2D):
 func player_exited_area(body: Node2D):
 	if body is Player:
 		is_player_inside = false
-
-	if interaction_info:
-		interaction_info.queue_free()
 	ScenesManager.hud.clear_texts()
 
 func dispose_area():
 	queue_free()
+
+func finished_minigame(winned:bool):
+	if winned:
+		dispose_area()
