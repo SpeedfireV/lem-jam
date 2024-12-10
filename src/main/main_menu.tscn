@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://p6grruibrtsq"]
+[gd_scene load_steps=6 format=3 uid="uid://p6grruibrtsq"]
 
 [ext_resource type="Texture2D" uid="uid://0u0fkigchvow" path="res://assets/graphics/bit.ly_3Zl89Tq.png" id="1_tshs1"]
+[ext_resource type="Script" path="res://src/main/button.gd" id="2_ix8r5"]
 
 [sub_resource type="Gradient" id="Gradient_jcqgt"]
 colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
@@ -53,10 +54,27 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -155.0
-offset_top = 89.0
+offset_top = -7.0
 offset_right = 501.0
-offset_bottom = 745.0
+offset_bottom = 649.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("1_tshs1")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -283.0
+offset_top = -197.0
+offset_right = 284.0
+offset_bottom = -59.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 120
+text = "I UNDERSTAND"
+script = ExtResource("2_ix8r5")
