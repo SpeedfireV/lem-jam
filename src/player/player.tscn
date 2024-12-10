@@ -1,8 +1,9 @@
-[gd_scene load_steps=14 format=3 uid="uid://ccf13asl4x4er"]
+[gd_scene load_steps=15 format=3 uid="uid://ccf13asl4x4er"]
 
 [ext_resource type="Script" path="res://src/player/player.gd" id="1_vhs4e"]
 [ext_resource type="Texture2D" uid="uid://batc3xnha22a2" path="res://assets/graphics/objects/player_idle_animation-Sheet.png" id="2_8ax26"]
 [ext_resource type="Texture2D" uid="uid://sl5glmp1gyur" path="res://assets/graphics/objects/player_move_right_animation-Sheet.png" id="2_btloe"]
+[ext_resource type="AudioStream" uid="uid://d2ng1f3ebpdal" path="res://assets/sounds/sfx/player_move_sound.wav" id="4_wsv03"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ofvjj"]
 atlas = ExtResource("2_8ax26")
@@ -111,3 +112,7 @@ shape = SubResource("CapsuleShape2D_804sf")
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(0, 3)
 zoom = Vector2(8, 8)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_wsv03")
+bus = &"SFX"

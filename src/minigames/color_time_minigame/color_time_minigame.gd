@@ -40,10 +40,8 @@ func _process(delta: float) -> void:
 			lights[i].add_theme_stylebox_override("panel", stylebox)
 	times_clicked_label.text = "YOU CLICKED\n" + str(times_pressed) + " TIMES"
 
-		
-
-
 func _on_button_pressed():
+	$Button_press_sound.play()
 	times_pressed += 1
 
 func _on_timer_timeout():

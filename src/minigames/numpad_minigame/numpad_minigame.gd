@@ -158,9 +158,11 @@ func _process(delta: float) -> void:
 	input_label.text = entered_code
 
 func _on_number_button_pressed(number: int):
+	$Button_press_sound.play()
 	entered_code += str(number)
 
 func _on_cancel_button_pressed():
+	$Button_press_sound.play()
 	entered_code = entered_code.substr(0, len(entered_code) - 1)
 
 func _on_accept_button_pressed():

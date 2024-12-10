@@ -1,9 +1,11 @@
-[gd_scene load_steps=12 format=3 uid="uid://ck8f844if1bju"]
+[gd_scene load_steps=14 format=3 uid="uid://ck8f844if1bju"]
 
 [ext_resource type="Script" path="res://src/minigames/hex_buttons_minigame/hex_buttons_minigame.gd" id="1_h8pqi"]
 [ext_resource type="Texture2D" uid="uid://bhtjj1vb2rymx" path="res://assets/graphics/objects/hex_game_buttons/button_1.png" id="2_u4476"]
 [ext_resource type="Texture2D" uid="uid://b2f03s1lrmoth" path="res://assets/graphics/objects/hex_game_buttons/button_1_pressed.png" id="3_a4f4d"]
 [ext_resource type="Texture2D" uid="uid://bww4v0ol6s6fx" path="res://assets/graphics/objects/hex_game_buttons/button_2.png" id="3_d0y0j"]
+[ext_resource type="AudioStream" uid="uid://pvahdhboo1le" path="res://assets/sounds/sfx/click_sound.wav" id="5_6s81x"]
+[ext_resource type="AudioStream" uid="uid://duwld5d2rvfui" path="res://assets/sounds/sfx/sound_wrong.wav" id="6_axxy6"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_sfx6f"]
 texture = ExtResource("3_a4f4d")
@@ -132,3 +134,9 @@ size_flags_vertical = 6
 theme_override_font_sizes/font_size = 100
 text = "ACCEPT
 "
+
+[node name="Button_press_sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_6s81x")
+
+[node name="Error_sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_axxy6")

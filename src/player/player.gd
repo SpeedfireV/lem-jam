@@ -28,8 +28,12 @@ func _physics_process(delta: float) -> void:
 
 	
 	if velocity.length() < 3:
+		if $AudioStreamPlayer.playing:
+			$AudioStreamPlayer.stop()
 		animation.animation = "idle"
 	else:
+		if not $AudioStreamPlayer.playing:
+			$AudioStreamPlayer.play()
 		animation.animation = "move"
 	if velocity.x > 0:
 		animation.flip_h = false

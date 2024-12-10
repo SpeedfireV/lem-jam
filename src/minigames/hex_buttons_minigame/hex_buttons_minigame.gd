@@ -97,14 +97,16 @@ func _process(delta):
 		answer_label.text += "X"
 
 func on_button_pressed(number: int):
-
 	if len(entered_sequence) < 6:
+		$Button_press_sound.play()
 		entered_sequence.append(number)
 	else:
+		$Error_sound.play()
 		pass # DODAĆ ERROR DŹWIĘK!!!
 	
 
 func cancel_last_move():
+	$Button_press_sound.play()
 	entered_sequence.pop_back()
 
 

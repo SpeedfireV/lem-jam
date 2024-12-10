@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://ri2a3m7ce5jk"]
+[gd_scene load_steps=7 format=3 uid="uid://ri2a3m7ce5jk"]
 
 [ext_resource type="Script" path="res://src/minigames/numpad_minigame/numpad_minigame.gd" id="1_6egj1"]
 [ext_resource type="Texture2D" uid="uid://bt0pgc8bqw1kc" path="res://assets/graphics/objects/sticky_note.png" id="1_h22sk"]
 [ext_resource type="Texture2D" uid="uid://ddmuqdwxhu8ki" path="res://assets/graphics/objects/wires/wire1.png" id="2_ccqly"]
 [ext_resource type="Texture2D" uid="uid://dbow0ba6kuack" path="res://assets/graphics/objects/wires/wire2.png" id="3_fs0qb"]
 [ext_resource type="Texture2D" uid="uid://d0hgwev8k47uw" path="res://assets/graphics/objects/wires/wire3_cut.png" id="4_lre5i"]
+[ext_resource type="AudioStream" uid="uid://pvahdhboo1le" path="res://assets/sounds/sfx/click_sound.wav" id="6_w0tmn"]
 
 [node name="numpad_minigame" type="Control"]
 layout_mode = 3
@@ -181,3 +182,6 @@ grow_vertical = 2
 rotation = 0.349066
 theme_override_font_sizes/font_size = 80
 text = "PLACEHOLDER"
+
+[node name="Button_press_sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_w0tmn")
