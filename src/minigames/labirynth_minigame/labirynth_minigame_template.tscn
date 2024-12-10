@@ -6,6 +6,7 @@
 
 [node name="LabirynthMinigameTemplate" instance=ExtResource("1_vk3bd")]
 script = ExtResource("2_sf0sv")
+minigame_view = null
 
 [node name="labirynth_minigame" parent="BackgroundTextureRect/MarginContainer/Mingame" index="0" instance=ExtResource("2_akk32")]
 layout_mode = 2

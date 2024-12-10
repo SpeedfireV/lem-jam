@@ -1,0 +1,16 @@
+extends InterationAreaTemplate
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	super._ready()
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+
+func finished_minigame(winned: bool):
+	ScenesManager.map.open_door7()
+	super.finished_minigame(winned)

@@ -43,4 +43,5 @@ func dispose_area():
 
 func finished_minigame(winned:bool):
 	if winned:
+		ScenesManager.finished_games += 1
 		dispose_area()
