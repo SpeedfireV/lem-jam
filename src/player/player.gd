@@ -11,7 +11,6 @@ func _ready():
 	ScenesManager.player = self
 
 func _physics_process(delta: float) -> void:
-	print(velocity)
 	direction = Input.get_vector("move_left", "move_right", "move_up", "move_down")
 	velocity += direction * ACC
 	if velocity.length() > MAX_SPEED:

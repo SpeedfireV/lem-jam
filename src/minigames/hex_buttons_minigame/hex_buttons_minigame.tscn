@@ -1,12 +1,21 @@
-[gd_scene load_steps=7 format=3 uid="uid://ck8f844if1bju"]
+[gd_scene load_steps=12 format=3 uid="uid://ck8f844if1bju"]
 
 [ext_resource type="Script" path="res://src/minigames/hex_buttons_minigame/hex_buttons_minigame.gd" id="1_h8pqi"]
+[ext_resource type="Texture2D" uid="uid://bhtjj1vb2rymx" path="res://assets/graphics/objects/hex_game_buttons/button_1.png" id="2_u4476"]
+[ext_resource type="Texture2D" uid="uid://b2f03s1lrmoth" path="res://assets/graphics/objects/hex_game_buttons/button_1_pressed.png" id="3_a4f4d"]
+[ext_resource type="Texture2D" uid="uid://bww4v0ol6s6fx" path="res://assets/graphics/objects/hex_game_buttons/button_2.png" id="3_d0y0j"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jaldc"]
-bg_color = Color(1, 0, 0, 1)
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_sfx6f"]
+texture = ExtResource("3_a4f4d")
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nhs8y"]
-bg_color = Color(0, 0, 1, 1)
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_80wgi"]
+texture = ExtResource("2_u4476")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rmf2q"]
+texture = ExtResource("3_d0y0j")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4r17f"]
+texture = ExtResource("3_d0y0j")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8k4v0"]
 bg_color = Color(0, 1, 0, 1)
@@ -39,6 +48,7 @@ theme_override_constants/separation = 16
 [node name="AnswerLabel" type="Label" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 100
 text = "CODE PLACEMENT"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
@@ -56,13 +66,16 @@ columns = 3
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-theme_override_styles/normal = SubResource("StyleBoxFlat_jaldc")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_sfx6f")
+theme_override_styles/normal = SubResource("StyleBoxTexture_80wgi")
+icon_alignment = 1
 
 [node name="Button2" type="Button" parent="VBoxContainer/HBoxContainer/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-theme_override_styles/normal = SubResource("StyleBoxFlat_nhs8y")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_rmf2q")
+theme_override_styles/normal = SubResource("StyleBoxTexture_4r17f")
 
 [node name="Button3" type="Button" parent="VBoxContainer/HBoxContainer/GridContainer"]
 layout_mode = 2
@@ -102,14 +115,20 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="CancelButton" type="Button" parent="VBoxContainer/HBoxContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer"]
 layout_mode = 2
-size_flags_vertical = 4
-text = "CANCEL"
 
-[node name="AcceptButton" type="Button" parent="VBoxContainer/HBoxContainer"]
+[node name="CancelButton" type="Button" parent="VBoxContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
-size_flags_vertical = 4
+size_flags_vertical = 6
+theme_override_font_sizes/font_size = 100
+text = "CANCEL"
+
+[node name="AcceptButton" type="Button" parent="VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+theme_override_font_sizes/font_size = 100
 text = "ACCEPT
 "
