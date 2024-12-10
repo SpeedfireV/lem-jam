@@ -109,7 +109,6 @@ func generate_code_wires():
 	var num2 = 100 + randi() % 900
 	var num3 = 100 + randi() % 900
 	code = "#" + str(num1) + "-" + str(num2) + "-" + str(num3)
-	print(code)
 	if randi() % 2 == 0:
 		wire1 = false
 	if randi() % 2 == 0:

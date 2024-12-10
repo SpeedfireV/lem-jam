@@ -1,6 +1,6 @@
 class_name Player extends CharacterBody2D
 
-const SPEED = 250.0
+const SPEED = 64
 var direction: Vector2 = Vector2.ZERO
 @onready var animation: AnimatedSprite2D = $AnimatedSprite2D
 @onready var particles: CPUParticles2D = $CPUParticles2D
