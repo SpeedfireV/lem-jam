@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://bv3qhpu1mw7nx"]
+[gd_scene load_steps=15 format=3 uid="uid://bv3qhpu1mw7nx"]
 
 [ext_resource type="Script" path="res://src/main/game.gd" id="1_lchk3"]
 [ext_resource type="PackedScene" uid="uid://ccf13asl4x4er" path="res://src/player/player.tscn" id="2_b63wl"]
@@ -8,14 +8,13 @@
 [ext_resource type="PackedScene" uid="uid://dhvdf5f5k2ix2" path="res://src/main/map.tscn" id="7_exltr"]
 [ext_resource type="PackedScene" uid="uid://ciepjvcpcjvpy" path="res://src/areas/area3.tscn" id="8_nlkxo"]
 [ext_resource type="AudioStream" uid="uid://cqom873350gah" path="res://assets/sounds/music/main_title_center_room_and_corridors_the_song.wav" id="9_armxa"]
-[ext_resource type="PackedScene" uid="uid://cow8bottiqjch" path="res://src/areas/area4.tscn" id="9_ccar5"]
+[ext_resource type="AudioStream" uid="uid://bei4dp2tr7hxx" path="res://assets/sounds/sfx/alarm_sound.wav" id="9_m4v1f"]
 [ext_resource type="Script" path="res://src/main/hud.gd" id="9_r5sfd"]
 [ext_resource type="PackedScene" uid="uid://dpw24w4y04l2l" path="res://src/areas/area0.tscn" id="9_viuhw"]
-[ext_resource type="PackedScene" uid="uid://b7ij1rjww0fj6" path="res://src/areas/area5.tscn" id="10_nbsua"]
-[ext_resource type="PackedScene" uid="uid://e8a0u5ls2pso" path="res://src/areas/area6.tscn" id="11_6dr4f"]
-[ext_resource type="PackedScene" uid="uid://c7ua8vwbcjxbj" path="res://src/areas/area7.tscn" id="12_yqk6u"]
-[ext_resource type="PackedScene" uid="uid://bob80n3xklrv3" path="res://src/areas/area8.tscn" id="13_cxy7n"]
-[ext_resource type="PackedScene" uid="uid://brcb6bt8h1okn" path="res://src/areas/area9.tscn" id="14_lfk1g"]
+[ext_resource type="AudioStream" uid="uid://mndsdg5qo0e7" path="res://assets/sounds/music/original_track_dont_steal_the_song.wav" id="11_a3fyw"]
+[ext_resource type="AudioStream" uid="uid://u6871r34ed1k" path="res://assets/sounds/music/beeps_and_boops_the_song.wav" id="12_malpn"]
+[ext_resource type="AudioStream" uid="uid://co54v1bsmkff2" path="res://assets/sounds/music/reflex_the_song.wav" id="13_l6bij"]
+[ext_resource type="AudioStream" uid="uid://bhn4gbm7g6tfe" path="res://assets/sounds/music/tik_tok_the_song.wav" id="14_7v60e"]
 
 [node name="Game" type="Node"]
 script = ExtResource("1_lchk3")
@@ -71,6 +70,26 @@ grow_horizontal = 2
 theme_override_font_sizes/font_size = 50
 text = "20:00"
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="Song1" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_m4v1f")
+bus = &"Musuc"
+
+[node name="Song2" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("9_armxa")
-volume_db = -10.0
+bus = &"Musuc"
+
+[node name="Song3" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("11_a3fyw")
+bus = &"Musuc"
+
+[node name="Song4" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("12_malpn")
+bus = &"Musuc"
+
+[node name="Song5" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("13_l6bij")
+bus = &"Musuc"
+
+[node name="Song6" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("14_7v60e")
+bus = &"Musuc"
