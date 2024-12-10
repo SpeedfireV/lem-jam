@@ -9,9 +9,3 @@ script = ExtResource("2_843rg")
 
 [node name="ColorTimeMinigame" parent="BackgroundTextureRect/MarginContainer/Mingame" index="0" instance=ExtResource("2_60lra")]
 layout_mode = 2
-
-[node name="Win_sound" parent="." index="1"]
-bus = &"SFX"
-
-[node name="Lose_sound" parent="." index="2"]
-bus = &"SFX"

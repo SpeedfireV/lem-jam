@@ -1,9 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://bu65e7qx8g7w1"]
+[gd_scene load_steps=3 format=3 uid="uid://bu65e7qx8g7w1"]
 
 [ext_resource type="Script" path="res://src/minigames/color_time_minigame/color_time_minigame.gd" id="1_yik61"]
 [ext_resource type="AudioStream" uid="uid://pvahdhboo1le" path="res://assets/sounds/sfx/click_sound.wav" id="2_4fnn5"]
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_icor5"]
 
 [node name="ColorTimeMinigame" type="Control"]
 layout_mode = 3
@@ -41,7 +39,6 @@ theme_override_constants/separation = 32
 [node name="LightPanel1" type="Panel" parent="HBoxContainer2/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_styles/panel = SubResource("StyleBoxTexture_icor5")
 
 [node name="LightPanel2" type="Panel" parent="HBoxContainer2/VBoxContainer/HBoxContainer"]
 layout_mode = 2

@@ -1,6 +1,7 @@
 extends Node
 
 
+
 # Called when the node enters the scene tree for the first time.
 #func _ready():
 	#var target_screen = 2  # Change to the desired screen index (starting from 0)
@@ -12,7 +13,13 @@ extends Node
 	#else:
 		#print("Invalid screen index. There are only ", screen_count, " screens available.")
 func _ready():
-	$AudioStreamPlayer.play()
+	$Song1.play()
+	$Song1.finished.connect($Song2.play)
+	$Song2.finished.connect($Song3.play)
+	$Song3.finished.connect($Song4.play)
+	$Song4.finished.connect($Song5.play)
+	$Song5.finished.connect($Song6.play)
+
 
 func _input(event):
 	if Input.is_action_just_pressed("ExitGame"):
