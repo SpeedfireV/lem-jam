@@ -1,13 +1,18 @@
-[gd_scene load_steps=8 format=3 uid="uid://dcvgsjnipa830"]
+[gd_scene load_steps=10 format=3 uid="uid://dcvgsjnipa830"]
 
 [ext_resource type="Script" path="res://src/minigames/labirynth_minigame/labirynth_minigame.gd" id="1_2otc0"]
 [ext_resource type="Script" path="res://src/minigames/labirynth_minigame/cells.gd" id="1_ufwa1"]
+[ext_resource type="Texture2D" uid="uid://cg8vv8upd5w4r" path="res://assets/graphics/objects/light_off.png" id="2_o03g1"]
 [ext_resource type="Texture2D" uid="uid://bejddxb01wckf" path="res://assets/graphics/objects/arrows/arrow_up.png" id="3_v3xed"]
 [ext_resource type="Texture2D" uid="uid://hcib2e28u6v6" path="res://assets/graphics/objects/arrows/arrow_left.png" id="4_us2dr"]
 [ext_resource type="Texture2D" uid="uid://cg7wb3qtanpdg" path="res://assets/graphics/objects/arrows/arrow_right.png" id="5_w7c74"]
 [ext_resource type="Texture2D" uid="uid://byyap5ntri3vd" path="res://assets/graphics/objects/arrows/arrow_down.png" id="6_321cw"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2bjgb"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_grpif"]
+texture = ExtResource("2_o03g1")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_iynsr"]
+texture = ExtResource("2_o03g1")
 
 [node name="labirynth_minigame" type="Control"]
 layout_mode = 3
@@ -40,17 +45,17 @@ theme_override_constants/separation = 24
 [node name="Panel" type="Panel" parent="HBoxContainer/VBoxContainer/LightsContainer"]
 custom_minimum_size = Vector2(96, 96)
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_2bjgb")
+theme_override_styles/panel = SubResource("StyleBoxTexture_grpif")
 
 [node name="Panel2" type="Panel" parent="HBoxContainer/VBoxContainer/LightsContainer"]
 custom_minimum_size = Vector2(96, 96)
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_2bjgb")
+theme_override_styles/panel = SubResource("StyleBoxTexture_iynsr")
 
 [node name="Panel3" type="Panel" parent="HBoxContainer/VBoxContainer/LightsContainer"]
 custom_minimum_size = Vector2(96, 96)
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_2bjgb")
+theme_override_styles/panel = SubResource("StyleBoxTexture_iynsr")
 
 [node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/VBoxContainer"]
 layout_mode = 2
