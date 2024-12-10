@@ -26,9 +26,6 @@ func minigame_finished(winned: bool):
 	else:
 		lose()
 
-func print_test():
-	print("test")
-
 func win():
 	$BackgroundTextureRect/Label.visible = false
 	$BackgroundTextureRect/AnimationPlayer.play("new_animation")

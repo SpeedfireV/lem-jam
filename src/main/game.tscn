@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://bi6861uomfeju" path="res://src/minigames/hex_buttons_minigame/hex_buttons_minigame_template.tscn" id="5_o8pq3"]
 [ext_resource type="PackedScene" uid="uid://c7k7ypy6jdi3i" path="res://src/templates/interaction_area_template.tscn" id="5_svp5j"]
 [ext_resource type="PackedScene" uid="uid://cw58r80hjosa2" path="res://src/minigames/labirynth_minigame/labirynth_minigame_template.tscn" id="5_u4rwf"]
-[ext_resource type="PackedScene" uid="uid://dhvdf5f5k2ix2" path="res://src/main/map.tscn" id="7_exltr"]
+[ext_resource type="PackedScene" path="res://src/main/map.tscn" id="7_exltr"]
 
 [node name="Game" type="Node"]
 script = ExtResource("1_lchk3")
