@@ -5,6 +5,11 @@
 
 [node name="MinigameTemplate2" instance=ExtResource("1_ctn68")]
 
+[node name="MarginContainer" parent="BackgroundTextureRect" index="0"]
+offset_right = 665.0
+offset_bottom = 329.0
+scale = Vector2(0.7, 0.7)
+
 [node name="EndMinigame" parent="BackgroundTextureRect/MarginContainer/Mingame" index="0" instance=ExtResource("2_ndv57")]
 layout_mode = 2
 

@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://de0ir4nijetiy" path="res://assets/graphics/objects/kosmos_tlo.png" id="2_yxrmt"]
 [ext_resource type="Script" path="res://src/main/minigames.gd" id="4_pgfxb"]
 [ext_resource type="PackedScene" uid="uid://b3gmm3ydl0b0k" path="res://src/areas/area1.tscn" id="6_bn3bd"]
-[ext_resource type="PackedScene" uid="uid://cw58r80hjosa2" path="res://src/minigames/labirynth_minigame/labirynth_minigame_template.tscn" id="6_w0tn2"]
+[ext_resource type="PackedScene" uid="uid://djlgkaiv0csag" path="res://src/minigames/numpad_minigame/numpad_minigame_template.tscn" id="6_j1a1c"]
 [ext_resource type="PackedScene" uid="uid://b3tdc3lky8esx" path="res://src/areas/area2.tscn" id="7_d8tji"]
 [ext_resource type="PackedScene" uid="uid://dhvdf5f5k2ix2" path="res://src/main/map.tscn" id="7_exltr"]
 [ext_resource type="PackedScene" uid="uid://ciepjvcpcjvpy" path="res://src/areas/area3.tscn" id="8_nlkxo"]
@@ -240,7 +240,7 @@ tile_set = SubResource("TileSet_x6ppb")
 [node name="Minigames" type="Node" parent="."]
 script = ExtResource("4_pgfxb")
 
-[node name="LabirynthMinigameTemplate" parent="Minigames" instance=ExtResource("6_w0tn2")]
+[node name="MinigameTemplate" parent="Minigames" instance=ExtResource("6_j1a1c")]
 
 [node name="InteractionAreas" type="Node" parent="."]
 
