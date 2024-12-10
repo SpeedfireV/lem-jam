@@ -1,4 +1,10 @@
-[gd_scene format=3 uid="uid://cqf4cwsamhgvq"]
+[gd_scene load_steps=6 format=3 uid="uid://cqf4cwsamhgvq"]
+
+[ext_resource type="Script" path="res://src/minigames/rebus_minigame/rebus_minigame.gd" id="1_4a837"]
+[ext_resource type="Texture2D" uid="uid://l26jvpy7g5tq" path="res://assets/graphics/objects/ryba.png" id="2_v8ego"]
+[ext_resource type="Texture2D" uid="uid://3buhh03uhf2d" path="res://assets/graphics/objects/sarna.png" id="3_7gqnh"]
+[ext_resource type="Texture2D" uid="uid://gv7ughvqwbhe" path="res://assets/graphics/objects/lew.png" id="4_sy8hi"]
+[ext_resource type="Texture2D" uid="uid://b7por7ok6hqu2" path="res://assets/graphics/objects/krab.png" id="5_kr5uu"]
 
 [node name="RebusMinigame" type="Control"]
 layout_mode = 3
@@ -7,14 +13,106 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_4a837")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -38.0
+offset_top = -25.0
+offset_right = 38.0
+offset_bottom = 25.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Button" type="Button" parent="VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 64
+
+[node name="TextureButton1" type="TextureButton" parent="VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+texture_normal = ExtResource("5_kr5uu")
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/TextureButton1"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -9.0
+offset_right = 20.0
+offset_bottom = 9.0
+grow_horizontal = 2
+grow_vertical = 2
+horizontal_alignment = 1
+
+[node name="TextureButton2" type="TextureButton" parent="VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+texture_normal = ExtResource("4_sy8hi")
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/TextureButton2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -9.0
+offset_right = 20.0
+offset_bottom = 9.0
+grow_horizontal = 2
+grow_vertical = 2
+horizontal_alignment = 1
+
+[node name="TextureButton3" type="TextureButton" parent="VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+texture_normal = ExtResource("2_v8ego")
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/TextureButton3"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -9.0
+offset_right = 20.0
+offset_bottom = 9.0
+grow_horizontal = 2
+grow_vertical = 2
+horizontal_alignment = 1
+
+[node name="TextureButton4" type="TextureButton" parent="VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+texture_normal = ExtResource("3_7gqnh")
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/TextureButton4"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -9.0
+offset_right = 20.0
+offset_bottom = 9.0
+grow_horizontal = 2
+grow_vertical = 2
+horizontal_alignment = 1
+
+[node name="AcceptButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
