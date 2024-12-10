@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bob80n3xklrv3"]
+
+[ext_resource type="PackedScene" uid="uid://c7k7ypy6jdi3i" path="res://src/templates/interaction_area_template.tscn" id="1_xabqs"]
+
+[node name="InteractionArea" instance=ExtResource("1_xabqs")]
+
+[node name="InteractionPolygonCollsion" parent="." index="0"]
+polygon = PackedVector2Array(-32, -366, -20, -335, 27, -335, 22, -366)

@@ -1,7 +1,7 @@
 class_name Player extends CharacterBody2D
 
 const MAX_SPEED = 50	
-const ACC = 15
+const ACC = 4
 var direction: Vector2 = Vector2.ZERO
 @onready var animation: AnimatedSprite2D = $AnimatedSprite2D
 @onready var particles: CPUParticles2D = $CPUParticles2D
