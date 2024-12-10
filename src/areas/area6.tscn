@@ -1,8 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://e8a0u5ls2pso"]
+[gd_scene load_steps=3 format=3 uid="uid://e8a0u5ls2pso"]
 
 [ext_resource type="PackedScene" uid="uid://c7k7ypy6jdi3i" path="res://src/templates/interaction_area_template.tscn" id="1_2ehbs"]
+[ext_resource type="PackedScene" uid="uid://djlgkaiv0csag" path="res://src/minigames/numpad_minigame/numpad_minigame_template.tscn" id="2_re2jr"]
 
 [node name="InteractionArea" instance=ExtResource("1_2ehbs")]
+minigame = ExtResource("2_re2jr")
 
 [node name="InteractionPolygonCollsion" parent="." index="0"]
 polygon = PackedVector2Array(-176, -415, -176, -384, -224, -383, -225, -414)

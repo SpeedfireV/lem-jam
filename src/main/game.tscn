@@ -1,14 +1,21 @@
-[gd_scene load_steps=10 format=3 uid="uid://bv3qhpu1mw7nx"]
+[gd_scene load_steps=17 format=3 uid="uid://bv3qhpu1mw7nx"]
 
 [ext_resource type="Script" path="res://src/main/game.gd" id="1_lchk3"]
 [ext_resource type="PackedScene" uid="uid://ccf13asl4x4er" path="res://src/player/player.tscn" id="2_b63wl"]
 [ext_resource type="Script" path="res://src/main/minigames.gd" id="4_pgfxb"]
-[ext_resource type="PackedScene" uid="uid://bi6861uomfeju" path="res://src/minigames/hex_buttons_minigame/hex_buttons_minigame_template.tscn" id="5_o8pq3"]
-[ext_resource type="PackedScene" uid="uid://c7k7ypy6jdi3i" path="res://src/templates/interaction_area_template.tscn" id="5_svp5j"]
+[ext_resource type="PackedScene" uid="uid://b3gmm3ydl0b0k" path="res://src/areas/area1.tscn" id="6_bn3bd"]
+[ext_resource type="PackedScene" uid="uid://b3tdc3lky8esx" path="res://src/areas/area2.tscn" id="7_d8tji"]
 [ext_resource type="PackedScene" uid="uid://dhvdf5f5k2ix2" path="res://src/main/map.tscn" id="7_exltr"]
+[ext_resource type="PackedScene" uid="uid://ciepjvcpcjvpy" path="res://src/areas/area3.tscn" id="8_nlkxo"]
 [ext_resource type="AudioStream" uid="uid://cqom873350gah" path="res://assets/sounds/music/main_title_center_room_and_corridors_the_song.wav" id="9_armxa"]
+[ext_resource type="PackedScene" uid="uid://cow8bottiqjch" path="res://src/areas/area4.tscn" id="9_ccar5"]
 [ext_resource type="Script" path="res://src/main/hud.gd" id="9_r5sfd"]
 [ext_resource type="PackedScene" uid="uid://dpw24w4y04l2l" path="res://src/areas/area0.tscn" id="9_viuhw"]
+[ext_resource type="PackedScene" uid="uid://b7ij1rjww0fj6" path="res://src/areas/area5.tscn" id="10_nbsua"]
+[ext_resource type="PackedScene" uid="uid://e8a0u5ls2pso" path="res://src/areas/area6.tscn" id="11_6dr4f"]
+[ext_resource type="PackedScene" uid="uid://c7ua8vwbcjxbj" path="res://src/areas/area7.tscn" id="12_yqk6u"]
+[ext_resource type="PackedScene" uid="uid://bob80n3xklrv3" path="res://src/areas/area8.tscn" id="13_cxy7n"]
+[ext_resource type="PackedScene" uid="uid://brcb6bt8h1okn" path="res://src/areas/area9.tscn" id="14_lfk1g"]
 
 [node name="Game" type="Node"]
 script = ExtResource("1_lchk3")
@@ -22,12 +29,25 @@ script = ExtResource("4_pgfxb")
 
 [node name="InteractionAreas" type="Node" parent="."]
 
-[node name="InteractionArea" parent="InteractionAreas" instance=ExtResource("5_svp5j")]
-visible = false
-minigame = ExtResource("5_o8pq3")
+[node name="InteractionArea" parent="InteractionAreas" instance=ExtResource("9_viuhw")]
 
-[node name="InteractionArea2" parent="InteractionAreas" instance=ExtResource("9_viuhw")]
-visible = false
+[node name="InteractionArea2" parent="InteractionAreas" instance=ExtResource("6_bn3bd")]
+
+[node name="InteractionArea3" parent="InteractionAreas" instance=ExtResource("7_d8tji")]
+
+[node name="InteractionArea4" parent="InteractionAreas" instance=ExtResource("8_nlkxo")]
+
+[node name="InteractionArea5" parent="InteractionAreas" instance=ExtResource("9_ccar5")]
+
+[node name="InteractionArea6" parent="InteractionAreas" instance=ExtResource("10_nbsua")]
+
+[node name="InteractionArea7" parent="InteractionAreas" instance=ExtResource("11_6dr4f")]
+
+[node name="InteractionArea8" parent="InteractionAreas" instance=ExtResource("12_yqk6u")]
+
+[node name="InteractionArea9" parent="InteractionAreas" instance=ExtResource("13_cxy7n")]
+
+[node name="InteractionArea10" parent="InteractionAreas" instance=ExtResource("14_lfk1g")]
 
 [node name="Hud" type="Node" parent="."]
 script = ExtResource("9_r5sfd")

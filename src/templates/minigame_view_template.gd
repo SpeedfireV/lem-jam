@@ -1,5 +1,7 @@
 class_name MinigameViewTemplate extends CanvasLayer
 
+signal finished(winned: bool)
+
 @onready var exit_button: Button = $BackgroundTextureRect/MarginContainer/ExitButton
 @onready var minigame_node: Node = $BackgroundTextureRect/MarginContainer/Mingame
 @export var minigame_view: PackedScene # MUSISZ DODAĆ NA STARCIE MINIGAME_VIEW - TO JEST WŁAŚCIWA MINIGIERKA
@@ -32,6 +34,7 @@ func win():
 	$BackgroundTextureRect/AnimationPlayer.play("new_animation")
 	$BackgroundTextureRect/Label.visible = true
 	$BackgroundTextureRect/AnimationPlayer.animation_finished.connect(exit_minigame)
+	finished.emit(true)
 
 func lose():
 	$Lose_sound.play()

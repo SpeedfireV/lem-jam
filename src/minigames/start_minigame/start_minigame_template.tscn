@@ -1,0 +1,11 @@
+[gd_scene load_steps=4 format=3 uid="uid://b1o6hj6jlfhon"]
+
+[ext_resource type="PackedScene" uid="uid://cwbx65lmu16d7" path="res://src/templates/minigame_view_template.tscn" id="1_cxbdv"]
+[ext_resource type="Script" path="res://src/minigames/start_minigame/start_minigame_template.gd" id="2_tg585"]
+[ext_resource type="PackedScene" uid="uid://c8a8qprjf7uh7" path="res://src/minigames/start_minigame/start_minigame.tscn" id="3_f202v"]
+
+[node name="MinigameTemplate" instance=ExtResource("1_cxbdv")]
+script = ExtResource("2_tg585")
+
+[node name="StartMinigame" parent="BackgroundTextureRect/MarginContainer/Mingame" index="0" instance=ExtResource("3_f202v")]
+layout_mode = 2
