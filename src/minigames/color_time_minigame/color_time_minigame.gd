@@ -40,9 +40,6 @@ func _process(delta: float) -> void:
 			lights[i].add_theme_stylebox_override("panel", stylebox)
 	times_clicked_label.text = "YOU CLICKED\n" + str(times_pressed) + " TIMES"
 
-		
-
-
 func _on_button_pressed():
 	times_pressed += 1
 

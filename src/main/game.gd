@@ -11,7 +11,8 @@ extends Node
 		#print("Window moved to screen: ", target_screen)
 	#else:
 		#print("Invalid screen index. There are only ", screen_count, " screens available.")
-
+func _ready():
+	$AudioStreamPlayer.play()
 
 func _input(event):
 	if Input.is_action_just_pressed("ExitGame"):

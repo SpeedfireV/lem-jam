@@ -19,6 +19,7 @@ func _ready():
 
 func _input(event):
 	if Input.is_action_just_pressed("enter_minigame") and is_player_inside:
+		$AudioStreamPlayer.play()
 		var new_minigame = minigame.instantiate() # JAK TO GÓWNO NIE DZIAŁA TO NIE WYBRAŁEŚ MINIGRY PRZYPISANEJ DO TEJ AREA
 		ScenesManager.minigames_node.set_minigame(new_minigame)
 
