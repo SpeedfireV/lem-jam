@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dhhwodxq30v88"
-path="res://.godot/imported/tesla-coil-animation.png-8344db6cedd07d476c8e4842d0b28656.ctex"
+uid="uid://do53yhgepyqx2"
+path="res://.godot/imported/arrow_up.png-082a8421b19f9188804f432107f90725.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/graphics/objects/tesla-coil-animation.png"
-dest_files=["res://.godot/imported/tesla-coil-animation.png-8344db6cedd07d476c8e4842d0b28656.ctex"]
+source_file="res://assets/graphics/objects/arrows/arrow_up.png"
+dest_files=["res://.godot/imported/arrow_up.png-082a8421b19f9188804f432107f90725.ctex"]
 
 [params]
 

@@ -11,7 +11,7 @@ func _ready():
 	set_minigame()
 
 func _process(delta):
-	print(exit_button)
+	pass
 
 func exit_minigame():
 	queue_free()

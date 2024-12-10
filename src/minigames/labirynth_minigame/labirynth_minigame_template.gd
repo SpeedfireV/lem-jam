@@ -11,7 +11,8 @@ func win():
 	$BackgroundTextureRect/Label.visible = false
 	$BackgroundTextureRect/AnimationPlayer.play("new_animation")
 	$BackgroundTextureRect/Label.visible = true
-	exit_minigame()
+	ScenesManager.minigames_node.clear_minigames()
+
 
 func lose():
-	pass
+	ScenesManager.minigames_node.clear_minigames()

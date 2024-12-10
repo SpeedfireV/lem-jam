@@ -20,6 +20,4 @@ func _physics_process(delta: float) -> void:
 		animation.flip_h = false
 	elif direction.x < 0:
 		animation.flip_h = true
-	
-	print(animation.animation)
 	move_and_slide()
