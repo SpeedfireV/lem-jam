@@ -1,11 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://b7ij1rjww0fj6"]
+[gd_scene load_steps=4 format=3 uid="uid://b7ij1rjww0fj6"]
 
 [ext_resource type="PackedScene" uid="uid://c7k7ypy6jdi3i" path="res://src/templates/interaction_area_template.tscn" id="1_f7xpc"]
 [ext_resource type="Script" path="res://src/areas/area_5.gd" id="2_w2tcp"]
+[ext_resource type="PackedScene" uid="uid://djlgkaiv0csag" path="res://src/minigames/numpad_minigame/numpad_minigame_template.tscn" id="3_2yabx"]
 
 [node name="InteractionArea" instance=ExtResource("1_f7xpc")]
 script = ExtResource("2_w2tcp")
-minigame = null
-
-[node name="InteractionPolygonCollsion" parent="." index="0"]
-polygon = PackedVector2Array(-160, -431, -160, -384, -144, -382, -128, -367, -121, -387, -113, -405, -119, -429)
+minigame = ExtResource("3_2yabx")
