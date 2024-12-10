@@ -1,9 +1,8 @@
-[gd_scene load_steps=15 format=3 uid="uid://ccf13asl4x4er"]
+[gd_scene load_steps=14 format=3 uid="uid://ccf13asl4x4er"]
 
 [ext_resource type="Script" path="res://src/player/player.gd" id="1_vhs4e"]
 [ext_resource type="Texture2D" uid="uid://batc3xnha22a2" path="res://assets/graphics/objects/player_idle_animation-Sheet.png" id="2_8ax26"]
 [ext_resource type="Texture2D" uid="uid://sl5glmp1gyur" path="res://assets/graphics/objects/player_move_right_animation-Sheet.png" id="2_btloe"]
-[ext_resource type="Texture2D" uid="uid://b15blrosd2pq" path="res://assets/icon.svg" id="2_wcima"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ofvjj"]
 atlas = ExtResource("2_8ax26")
@@ -72,31 +71,32 @@ animations = [{
 "loop": true,
 "name": &"move",
 "speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("2_wcima")
-}],
-"loop": true,
-"name": &"placeholder",
-"speed": 5.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_vcygc"]
-size = Vector2(32.5, 32)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_804sf"]
+radius = 2.0
+height = 6.0
 
 [node name="Player" type="CharacterBody2D"]
+scale = Vector2(2.2, 2.2)
 script = ExtResource("1_vhs4e")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.25, 0.25)
 sprite_frames = SubResource("SpriteFrames_ibwwf")
-animation = &"placeholder"
+animation = &"move"
 autoplay = "idle"
-frame_progress = 0.478204
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("RectangleShape2D_vcygc")
+position = Vector2(0, 1)
+shape = SubResource("CapsuleShape2D_804sf")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(16, 16)
+position = Vector2(0, 3)
+zoom = Vector2(10, 10)
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+position = Vector2(0, 3.63636)
+amount = 4
+direction = Vector2(1, 1)
+angle_max = 109.7
