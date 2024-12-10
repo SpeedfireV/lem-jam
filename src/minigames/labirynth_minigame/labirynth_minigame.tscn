@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://dcvgsjnipa830"]
+[gd_scene load_steps=12 format=3 uid="uid://dcvgsjnipa830"]
 
 [ext_resource type="Script" path="res://src/minigames/labirynth_minigame/labirynth_minigame.gd" id="1_2otc0"]
 [ext_resource type="Script" path="res://src/minigames/labirynth_minigame/cells.gd" id="1_ufwa1"]
@@ -7,6 +7,8 @@
 [ext_resource type="Texture2D" uid="uid://hcib2e28u6v6" path="res://assets/graphics/objects/arrows/arrow_left.png" id="4_us2dr"]
 [ext_resource type="Texture2D" uid="uid://cg7wb3qtanpdg" path="res://assets/graphics/objects/arrows/arrow_right.png" id="5_w7c74"]
 [ext_resource type="Texture2D" uid="uid://byyap5ntri3vd" path="res://assets/graphics/objects/arrows/arrow_down.png" id="6_321cw"]
+[ext_resource type="AudioStream" uid="uid://pvahdhboo1le" path="res://assets/sounds/sfx/click_sound.wav" id="8_xaxv2"]
+[ext_resource type="AudioStream" uid="uid://duwld5d2rvfui" path="res://assets/sounds/sfx/sound_wrong.wav" id="9_xuorc"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_grpif"]
 texture = ExtResource("2_o03g1")
@@ -115,3 +117,11 @@ expand_icon = true
 
 [node name="Control5" type="Control" parent="HBoxContainer/GridContainer"]
 layout_mode = 2
+
+[node name="Button_press_sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_xaxv2")
+bus = &"SFX"
+
+[node name="Error_sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_xuorc")
+bus = &"SFX"

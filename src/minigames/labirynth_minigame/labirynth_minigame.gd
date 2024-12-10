@@ -68,6 +68,7 @@ func check_if_correct():
 		if is_correct:
 			break
 	if not is_correct:
+		$Error_sound.play()
 		finished.emit(false)
 	if current_position == directions[turned_on_light][len(directions[turned_on_light]) - 1]:
 		finished.emit(true)

@@ -7,3 +7,9 @@
 
 [node name="EndMinigame" parent="BackgroundTextureRect/MarginContainer/Mingame" index="0" instance=ExtResource("2_ndv57")]
 layout_mode = 2
+
+[node name="Win_sound" parent="." index="1"]
+bus = &"SFX"
+
+[node name="Lose_sound" parent="." index="2"]
+bus = &"SFX"
