@@ -16,7 +16,7 @@ func _ready() -> void:
 	ScenesManager.map = self
 
 func _process(delta):
-	if ScenesManager.finished_games > 0:
+	if ScenesManager.finished_games > 5:
 		open_final_door()
 		ScenesManager.finished_games = 0
 

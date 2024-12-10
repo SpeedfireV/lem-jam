@@ -1,5 +1,7 @@
 extends Control
 
+var final_screen: PackedScene = preload("res://src/main/end_screen.tscn")
+
 signal finished(win: bool)
 
 @onready var button1: Button = $VBoxContainer/HBoxContainer/Button1
@@ -21,10 +23,11 @@ func _process(delta: float) -> void:
 
 
 func _on_button1_pressed():
-	pass
+	finished.emit(false)
 func _on_button2_pressed():
-	pass
+	finished.emit(false)
 func _on_button3_pressed():
-	pass
+	finished.emit(true)
+	get_tree().change_scene_to_packed(final_screen)
 func _on_button4_pressed():
-	pass
+	finished.emit(false)

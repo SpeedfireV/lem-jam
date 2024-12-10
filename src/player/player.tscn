@@ -75,8 +75,8 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_804sf"]
-radius = 2.0
-height = 6.0
+radius = 1.27273
+height = 3.45455
 
 [node name="Player" type="CharacterBody2D"]
 scale = Vector2(2.2, 2.2)
@@ -106,7 +106,7 @@ animation = &"move"
 autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 1)
+position = Vector2(0, 2.27273)
 shape = SubResource("CapsuleShape2D_804sf")
 
 [node name="Camera2D" type="Camera2D" parent="."]
