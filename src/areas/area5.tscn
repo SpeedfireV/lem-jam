@@ -9,3 +9,6 @@ minigame = null
 
 [node name="InteractionPolygonCollsion" parent="." index="0"]
 polygon = PackedVector2Array(-160, -431, -160, -384, -144, -382, -128, -367, -121, -387, -113, -405, -119, -429)
+
+[node name="GameMap" parent="." index="1"]
+visible = false
