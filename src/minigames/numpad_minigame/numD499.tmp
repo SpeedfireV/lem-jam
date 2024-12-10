@@ -179,5 +179,5 @@ offset_bottom = -11.0
 grow_horizontal = 2
 grow_vertical = 2
 rotation = 0.349066
-theme_override_font_sizes/font_size = 80
+theme_override_font_sizes/font_size = 100
 text = "PLACEHOLDER"

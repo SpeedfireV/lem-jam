@@ -9,3 +9,4 @@ func _ready():
 		stylebox.bg_color = Color.GRAY
 		cell.add_theme_stylebox_override("panel", stylebox)
 		add_child(cell)
+		print("ADDED!")
