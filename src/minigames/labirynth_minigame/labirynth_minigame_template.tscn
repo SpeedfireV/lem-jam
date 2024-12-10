@@ -11,7 +11,7 @@ script = ExtResource("2_sf0sv")
 layout_mode = 2
 
 [node name="Win_sound" parent="." index="1"]
-bus = &"SFX"
+bus = &"Master"
 
 [node name="Lose_sound" parent="." index="2"]
-bus = &"SFX"
+bus = &"Master"
