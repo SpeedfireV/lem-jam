@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://cul0l0lik7um3"]
+
+[node name="BottomInfoLabel" type="Label"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -12.5
+offset_top = -18.0
+offset_right = 12.5
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme_override_font_sizes/font_size = 44
+text = "TEXT"
+horizontal_alignment = 1

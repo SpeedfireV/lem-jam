@@ -1,9 +1,10 @@
-[gd_scene load_steps=11 format=3 uid="uid://bv3qhpu1mw7nx"]
+[gd_scene load_steps=12 format=3 uid="uid://bv3qhpu1mw7nx"]
 
 [ext_resource type="Script" path="res://src/main/game.gd" id="1_lchk3"]
 [ext_resource type="PackedScene" uid="uid://ccf13asl4x4er" path="res://src/player/player.tscn" id="2_b63wl"]
 [ext_resource type="PackedScene" uid="uid://djlgkaiv0csag" path="res://src/minigames/numpad_minigame/numpad_minigame_template.tscn" id="4_5haao"]
 [ext_resource type="Script" path="res://src/main/minigames.gd" id="4_pgfxb"]
+[ext_resource type="PackedScene" uid="uid://cjgs8yp5tguco" path="res://src/minigames/color_time_minigame/color_time_minigame_template.tscn" id="5_6nae6"]
 [ext_resource type="PackedScene" uid="uid://bi6861uomfeju" path="res://src/minigames/hex_buttons_minigame/hex_buttons_minigame_template.tscn" id="5_o8pq3"]
 [ext_resource type="PackedScene" uid="uid://c7k7ypy6jdi3i" path="res://src/templates/interaction_area_template.tscn" id="5_svp5j"]
 [ext_resource type="PackedScene" uid="uid://cw58r80hjosa2" path="res://src/minigames/labirynth_minigame/labirynth_minigame_template.tscn" id="5_u4rwf"]
@@ -21,6 +22,9 @@ script = ExtResource("1_lchk3")
 [node name="Minigames" type="Node" parent="."]
 script = ExtResource("4_pgfxb")
 
+[node name="ColorTimeMinigameTemplate" parent="Minigames" instance=ExtResource("5_6nae6")]
+visible = false
+
 [node name="HexButtonsMinigameTemplate" parent="Minigames" instance=ExtResource("5_o8pq3")]
 
 [node name="NumpadMinigame" parent="Minigames" instance=ExtResource("4_5haao")]
@@ -30,27 +34,30 @@ script = ExtResource("4_pgfxb")
 [node name="InteractionAreas" type="Node" parent="."]
 
 [node name="InteractionArea" parent="InteractionAreas" instance=ExtResource("5_svp5j")]
+visible = false
 minigame = ExtResource("5_o8pq3")
 
 [node name="InteractionArea2" parent="InteractionAreas" instance=ExtResource("9_viuhw")]
+visible = false
 
 [node name="Hud" type="Node" parent="."]
 script = ExtResource("9_r5sfd")
 
+[node name="Timer" type="Timer" parent="Hud"]
+wait_time = 1200.0
+autostart = true
+
 [node name="HudCanvasLayer" type="CanvasLayer" parent="Hud"]
 
-[node name="Label" type="Label" parent="Hud/HudCanvasLayer"]
-anchors_preset = 7
+[node name="CanvasLayer" type="CanvasLayer" parent="Hud"]
+
+[node name="TimeLabel" type="Label" parent="Hud/CanvasLayer"]
+anchors_preset = 5
 anchor_left = 0.5
-anchor_top = 1.0
 anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -17.0
-offset_top = -18.0
-offset_right = 17.0
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 18.0
 grow_horizontal = 2
-grow_vertical = 0
-size_flags_horizontal = 4
-size_flags_vertical = 8
-theme_override_font_sizes/font_size = 36
-text = "SPACE"
+theme_override_font_sizes/font_size = 50
+text = "20:00"
