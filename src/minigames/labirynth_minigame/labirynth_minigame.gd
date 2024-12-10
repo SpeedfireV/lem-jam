@@ -2,7 +2,7 @@ class_name LabirynthMinigame extends Control
 
 signal finished(win: bool)
 
-var current_position = Vector2(1, 1)
+var current_position: Vector2
 
 @onready var button_up: Button = $HBoxContainer/GridContainer/ButtonUp
 @onready var button_left: Button = $HBoxContainer/GridContainer/ButtonLeft
@@ -26,6 +26,7 @@ var directions: Dictionary = {
 }
 
 func _ready():
+	current_position = directions[turned_on_light][0]
 	button_up.pressed.connect(move_up)
 	button_left.pressed.connect(move_left)
 	button_right.pressed.connect(move_right)
