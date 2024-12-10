@@ -1,0 +1,11 @@
+[gd_scene load_steps=4 format=3 uid="uid://fq88gf5hubd7"]
+
+[ext_resource type="PackedScene" uid="uid://cwbx65lmu16d7" path="res://src/templates/minigame_view_template.tscn" id="1_xnxqr"]
+[ext_resource type="Script" path="res://src/minigames/sounds_matching_minigame/sounds_matching_minigame_template.gd" id="2_v0xdo"]
+[ext_resource type="PackedScene" uid="uid://c48wb7ucvoh3o" path="res://src/minigames/sounds_matching_minigame/sounds_matching_minigame.tscn" id="2_yjogb"]
+
+[node name="MinigameTemplate" instance=ExtResource("1_xnxqr")]
+script = ExtResource("2_v0xdo")
+
+[node name="SoundsMatchingMinigame" parent="BackgroundTextureRect/MarginContainer/Mingame" index="0" instance=ExtResource("2_yjogb")]
+layout_mode = 2

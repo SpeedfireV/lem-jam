@@ -2,11 +2,11 @@
 
 [ext_resource type="PackedScene" uid="uid://c7k7ypy6jdi3i" path="res://src/templates/interaction_area_template.tscn" id="1_ly11q"]
 [ext_resource type="Script" path="res://src/areas/area_0.gd" id="2_8oa4l"]
-[ext_resource type="PackedScene" uid="uid://cjgs8yp5tguco" path="res://src/minigames/color_time_minigame/color_time_minigame_template.tscn" id="3_tulvm"]
+[ext_resource type="PackedScene" uid="uid://fq88gf5hubd7" path="res://src/minigames/sounds_matching_minigame/sounds_matching_minigame_template.tscn" id="3_0783k"]
 
 [node name="InteractionArea" instance=ExtResource("1_ly11q")]
 script = ExtResource("2_8oa4l")
-minigame = ExtResource("3_tulvm")
+minigame = ExtResource("3_0783k")
 
 [node name="InteractionPolygonCollsion" parent="." index="0"]
 polygon = PackedVector2Array(-49, -47, -47, -21, -16, -16, -1, -23, 9, -34, 17, -47, -31, -48)
