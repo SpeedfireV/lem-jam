@@ -1,10 +1,11 @@
-[gd_scene load_steps=10 format=4 uid="uid://dhvdf5f5k2ix2"]
+[gd_scene load_steps=11 format=4 uid="uid://dhvdf5f5k2ix2"]
 
 [ext_resource type="Texture2D" uid="uid://d1nx77n02816q" path="res://assets/graphics/objects/tiles-sheet-map2.png" id="1_o2dci"]
 [ext_resource type="Texture2D" uid="uid://dflhf48fkh6gp" path="res://assets/graphics/objects/tiles-sheet-map.png" id="2_rw72m"]
 [ext_resource type="Texture2D" uid="uid://ds7jna37k8wro" path="res://assets/graphics/objects/tiles_blue-Sheet.png" id="3_akcgo"]
 [ext_resource type="Texture2D" uid="uid://c1rolbgd0p1ll" path="res://assets/graphics/objects/game_map.png" id="4_iaoid"]
 [ext_resource type="Script" path="res://src/main/map.gd" id="4_rhxch"]
+[ext_resource type="AudioStream" uid="uid://bfexf5d7koko0" path="res://assets/sounds/sfx/door_open_sound.wav" id="6_nox6a"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_u786e"]
 texture = ExtResource("1_o2dci")
@@ -306,3 +307,7 @@ script = ExtResource("4_rhxch")
 visible = false
 position = Vector2(0, -319)
 texture = ExtResource("4_iaoid")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_nox6a")
+bus = &"SFX"
