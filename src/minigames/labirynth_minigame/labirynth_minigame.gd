@@ -50,20 +50,15 @@ func check_if_correct():
 		is_correct = check_if_between(directions[turned_on_light][i], directions[turned_on_light][i + 1])
 		if is_correct:
 			break
-	print("Pos is" + str(is_correct))
 	if not is_correct:
 		finished.emit(false)
 	if current_position == directions[turned_on_light][len(directions[turned_on_light]) - 1]:
 		finished.emit(true)
 
 func check_if_between(vector1: Vector2, vector2: Vector2) -> bool:
-	print("CHECK!!!")
-	print(vector1, vector2, current_position)
 	if vector1.x == vector2.x and vector2.x == current_position.x:
-		print("got x")
 		return min(vector1.y, vector2.y) <= current_position.y and current_position.y <= max(vector1.y, vector2.y)
 	elif vector1.y == vector2.y and vector2.y == current_position.y:
-		print("got y")
 		return min(vector1.x, vector2.x) <= current_position.x and current_position.x  <= max(vector1.x, vector2.x)
 	else:
 		return false
