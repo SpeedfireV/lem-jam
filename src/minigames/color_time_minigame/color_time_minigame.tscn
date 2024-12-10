@@ -70,6 +70,11 @@ theme_override_font_sizes/font_size = 44
 text = "TIME"
 horizontal_alignment = 1
 
+[node name="TimesClickedLabel" type="Label" parent="HBoxContainer2/VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 44
+horizontal_alignment = 1
+
 [node name="Timer" type="Timer" parent="."]
 wait_time = 16.0
 one_shot = true
