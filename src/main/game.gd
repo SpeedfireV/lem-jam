@@ -27,4 +27,6 @@ func _input(event):
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	if not $AnimationPlayer.is_playing():
+		$AnimationPlayer.play("new_animation")
 	pass
