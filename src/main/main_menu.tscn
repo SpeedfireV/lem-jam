@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://p6grruibrtsq"]
 
-[ext_resource type="Texture2D" uid="uid://0u0fkigchvow" path="res://assets/graphics/bit.ly_3Zl89Tq.png" id="1_tshs1"]
+[ext_resource type="Texture2D" uid="uid://bhykf3xy0vbwf" path="res://assets/graphics/qr-code.png" id="1_tshs1"]
 [ext_resource type="Script" path="res://src/main/button.gd" id="2_ix8r5"]
 
 [sub_resource type="Gradient" id="Gradient_jcqgt"]
