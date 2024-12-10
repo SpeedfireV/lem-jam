@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://src/templates/interaction_area_template.gd" id="1_ef4ow"]
 [ext_resource type="PackedScene" uid="uid://ccf13asl4x4er" path="res://src/player/player.tscn" id="2_ci3ys"]
 [ext_resource type="Texture2D" uid="uid://c1rolbgd0p1ll" path="res://assets/graphics/objects/game_map.png" id="3_b0cy0"]
-[ext_resource type="AudioStream" uid="uid://pvahdhboo1le" path="res://assets/sounds/sfx/click_sound.wav" id="4_y4wft"]
+[ext_resource type="AudioStream" uid="uid://cxndodrgsmr00" path="res://assets/sounds/sfx/click_sound2.wav" id="4_ka0j3"]
 
 [node name="InteractionArea" type="Area2D"]
 script = ExtResource("1_ef4ow")
@@ -16,5 +16,5 @@ position = Vector2(0, -319)
 texture = ExtResource("3_b0cy0")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("4_y4wft")
+stream = ExtResource("4_ka0j3")
 bus = &"SFX"

@@ -27,10 +27,12 @@ func minigame_finished(winned: bool):
 		lose()
 
 func win():
+	$Win_sound.play()
 	$BackgroundTextureRect/Label.visible = false
 	$BackgroundTextureRect/AnimationPlayer.play("new_animation")
 	$BackgroundTextureRect/Label.visible = true
 	$BackgroundTextureRect/AnimationPlayer.animation_finished.connect(exit_minigame)
 
 func lose():
+	$Lose_sound.play()
 	pass
