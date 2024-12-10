@@ -55,7 +55,6 @@ func _ready():
 			normal_stylebox.bg_color = colors[(row-1) * 3 + j]
 			pressed_stylebox.bg_color = colors[(row-1) * 3 + j].lightened(0.4)
 			hover_stylebox.bg_color = colors[(row-1) * 3 + j].lightened(0.25)
-			print(colors[i])
 
 			buttons[i * 3 + j].add_theme_stylebox_override("normal", normal_stylebox)
 			buttons[i * 3 + j].add_theme_stylebox_override("pressed", pressed_stylebox)

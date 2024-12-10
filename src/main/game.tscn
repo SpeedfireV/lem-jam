@@ -1,11 +1,12 @@
-[gd_scene load_steps=7 format=3 uid="uid://bv3qhpu1mw7nx"]
+[gd_scene load_steps=8 format=3 uid="uid://bv3qhpu1mw7nx"]
 
 [ext_resource type="Script" path="res://src/main/game.gd" id="1_lchk3"]
 [ext_resource type="PackedScene" uid="uid://ccf13asl4x4er" path="res://src/player/player.tscn" id="2_b63wl"]
+[ext_resource type="PackedScene" uid="uid://djlgkaiv0csag" path="res://src/minigames/numpad_minigame/numpad_minigame_template.tscn" id="4_5haao"]
 [ext_resource type="Script" path="res://src/main/minigames.gd" id="4_pgfxb"]
 [ext_resource type="PackedScene" uid="uid://bi6861uomfeju" path="res://src/minigames/hex_buttons_minigame/hex_buttons_minigame_template.tscn" id="5_o8pq3"]
 [ext_resource type="PackedScene" uid="uid://c7k7ypy6jdi3i" path="res://src/templates/interaction_area_template.tscn" id="5_svp5j"]
-[ext_resource type="PackedScene" uid="uid://cw58r80hjosa2" path="res://src/minigames/labirynth_minigame/labirynth_minigame_template.tscn" id="5_u4rwf"]
+[ext_resource type="PackedScene" uid="uid://85ngytelf18j" path="res://src/minigames/labirynth_minigame/minigame1.tscn" id="5_u4rwf"]
 
 [node name="Game" type="Node"]
 script = ExtResource("1_lchk3")
@@ -14,6 +15,8 @@ script = ExtResource("1_lchk3")
 
 [node name="Minigames" type="Node" parent="."]
 script = ExtResource("4_pgfxb")
+
+[node name="NumpadMinigame" parent="Minigames" instance=ExtResource("4_5haao")]
 
 [node name="HexButtonsMinigameTemplate" parent="Minigames" instance=ExtResource("5_o8pq3")]
 
