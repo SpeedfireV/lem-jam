@@ -16,3 +16,4 @@ func win():
 
 func lose():
 	super.lose()
+	ScenesManager.minigames_node.clear_minigames()

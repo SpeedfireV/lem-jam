@@ -13,7 +13,8 @@ var sounds: Array[AudioStreamWAV] = [
 @onready var repeat_button: Button = $VBoxContainer/HBoxContainer/RepeatButton
 @onready var accept_button: Button = $VBoxContainer/HBoxContainer/AcceptButton
 @onready var audio_player: AudioStreamPlayer = $AudioStreamPlayer
-@onready var input_label: Label = $VBoxContainer/Label
+@onready var input_label: Label = $VBoxContainer/HBoxContainer2/Label
+@onready var cancel_button: Button = $VBoxContainer/HBoxContainer2/CancelButton
 
 @onready var button1: Button = $VBoxContainer/HBoxContainer/ButtonsSoundContainer/Button1
 @onready var button2: Button = $VBoxContainer/HBoxContainer/ButtonsSoundContainer/Button2
@@ -43,6 +44,7 @@ func _ready() -> void:
 	repeat_button.pressed.connect(play_sound)
 	audio_player.finished.connect(sound_finished)
 	accept_button.pressed.connect(check_sequence)
+	cancel_button.pressed.connect(cancel_last)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -81,3 +83,6 @@ func check_sequence():
 		finished.emit(true)
 	else:
 		finished.emit(false)
+
+func cancel_last():
+	entered_order.pop_back()
